@@ -6,338 +6,179 @@ db.item.drop();
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "filter-inserter";
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "accumulator";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "fast-inserter";
-i["amount"] = 1;
+i["name"] = "iron-plate";
+i["amount"] = 2;
 ings.push(i);
 i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 4;
+i["name"] = "battery";
+i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "filter-inserter";
-doc["enabled"] = false;
+doc["result"] = "accumulator";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "stone-brick";
+doc["type"] = "recipe";
 doc["energy_required"] = 3.5;
+doc["name"] = "copper-plate";
+doc["result"] = "copper-plate";
 ings = [];
 i = {};
-i["name"] = "stone";
-i["amount"] = 2;
+i["name"] = "copper-ore";
+i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["enabled"] = true;
-doc["type"] = "recipe";
-doc["name"] = "stone-brick";
 doc["category"] = "smelting";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "iron-axe";
 doc["type"] = "recipe";
-doc["name"] = "iron-axe";
-ings = [];
-i = {};
-i["name"] = "iron-stick";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "land-mine";
-doc["energy_required"] = 5;
-doc["result_count"] = 4;
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "explosives";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "land-mine";
+doc["energy_required"] = 1;
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result_count"] = 2;
-doc["result"] = "small-electric-pole";
-doc["type"] = "recipe";
-doc["name"] = "small-electric-pole";
-ings = [];
-i = {};
-i["name"] = "wood";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "copper-cable";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "flame-thrower-ammo";
-doc["energy_required"] = 3;
 ings = [];
 i = {};
 i["type"] = "item";
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "light-oil";
-i["amount"] = 2.5;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "heavy-oil";
-i["amount"] = 2.5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "flame-thrower-ammo";
-doc["category"] = "chemistry";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["result"] = "piercing-rounds-magazine";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
+i["amount"] = 1;
 i["name"] = "steel-plate";
-i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "piercing-rounds-magazine";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "rail";
-doc["result_count"] = 2;
-ings = [];
-i = {};
-i["name"] = "stone";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-stick";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rail";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "flame-thrower";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "flame-thrower";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "construction-robot";
-ings = [];
-i = {};
-i["name"] = "flying-robot-frame";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "construction-robot";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "discharge-defense-remote";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "discharge-defense-remote";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/fill-crude-oil-barrel.png";
-doc["order"] = "b[fill-crude-oil-barrel]";
-doc["category"] = "crafting-with-fluid";
+doc["category"] = "crafting";
+doc["name"] = "empty-barrel";
 doc["subgroup"] = "barrel";
-doc["energy_required"] = 1;
+doc["requester_paste_multiplier"] = 10;
 res = [];
 i = {};
 i["amount"] = "item";
-i["amount"] = "crude-oil-barrel";
 i["amount"] = 1;
+i["amount"] = "empty-barrel";
 res.push(i);
 doc["results"] = res;
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "crude-oil";
-i["amount"] = 25;
-ings.push(i);
-i = {};
-i["type"] = "item";
-i["name"] = "empty-barrel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fill-crude-oil-barrel";
-doc["enabled"] = false;
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 60;
-doc["result"] = "effectivity-module-3";
-ings = [];
-i = {};
-i["name"] = "effectivity-module-2";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "effectivity-module-3";
+doc["energy_required"] = 3;
+doc["name"] = "shotgun-shell";
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "assembling-machine-3";
 ings = [];
 i = {};
-i["name"] = "speed-module";
-i["amount"] = 4;
+i["name"] = "copper-plate";
+i["amount"] = 2;
 ings.push(i);
 i = {};
-i["name"] = "assembling-machine-2";
+i["name"] = "iron-plate";
 i["amount"] = 2;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "assembling-machine-3";
-doc["enabled"] = false;
+doc["result"] = "shotgun-shell";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 4;
-doc["result"] = "shotgun";
+doc["type"] = "recipe";
+doc["name"] = "discharge-defense-remote";
+doc["enabled"] = false;
 ings = [];
 i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "discharge-defense-remote";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["result"] = "express-underground-belt";
+doc["result_count"] = 2;
+doc["name"] = "express-underground-belt";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "fast-underground-belt";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 4;
+i["name"] = "lubricant";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "inserter";
+doc["requester_paste_multiplier"] = 4;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+i = {};
 i["name"] = "iron-plate";
-i["amount"] = 15;
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "inserter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["name"] = "electric-mining-drill";
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
 ings.push(i);
 i = {};
 i["name"] = "iron-gear-wheel";
 i["amount"] = 5;
 ings.push(i);
 i = {};
-i["name"] = "copper-plate";
+i["name"] = "iron-plate";
 i["amount"] = 10;
 ings.push(i);
-i = {};
-i["name"] = "wood";
-i["amount"] = 5;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "shotgun";
-doc["enabled"] = false;
+doc["result"] = "electric-mining-drill";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["energy_required"] = 60;
-doc["result"] = "productivity-module-3";
+doc["name"] = "productivity-module-3";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "productivity-module-2";
@@ -356,108 +197,216 @@ i["name"] = "alien-artifact";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "productivity-module-3";
-doc["enabled"] = false;
+doc["result"] = "productivity-module-3";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "night-vision-equipment";
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["result"] = "engine-unit";
+doc["name"] = "engine-unit";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "advanced-circuit";
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "advanced-crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["result"] = "express-transport-belt";
+doc["name"] = "express-transport-belt";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
 i["amount"] = 5;
 ings.push(i);
 i = {};
-i["name"] = "steel-plate";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "night-vision-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "heavy-armor";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 100;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 50;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "heavy-armor";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "processing-unit";
-doc["energy_required"] = 15;
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 2;
+i["name"] = "fast-transport-belt";
+i["amount"] = 1;
 ings.push(i);
 i = {};
 i["type"] = "fluid";
-i["name"] = "sulfuric-acid";
-i["amount"] = 0.5;
+i["amount"] = 2;
+i["name"] = "lubricant";
 ings.push(i);
 doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "processing-unit";
 doc["category"] = "crafting-with-fluid";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "rocket-part";
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "iron-chest";
+doc["enabled"] = true;
 ings = [];
 i = {};
-i["name"] = "low-density-structure";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "rocket-fuel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "rocket-control-unit";
-i["amount"] = 10;
+i["name"] = "iron-plate";
+i["amount"] = 8;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["energy_required"] = 3;
-doc["category"] = "rocket-building";
-doc["hidden"] = true;
-doc["type"] = "recipe";
-doc["name"] = "rocket-part";
-doc["enabled"] = false;
+doc["result"] = "iron-chest";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 1;
+i["name"] = "light-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "solid-fuel-from-light-oil";
+doc["icon"] = "__base__/graphics/icons/solid-fuel-from-light-oil.png";
+doc["order"] = "b[fluid-chemistry]-c[solid-fuel-from-light-oil]";
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 1;
+i["amount"] = "solid-fuel";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 25;
+doc["requester_paste_multiplier"] = 1;
+doc["name"] = "power-armor-mk2";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "effectivity-module-3";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "speed-module-3";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "alien-artifact";
+i["amount"] = 50;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "power-armor-mk2";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "steel-furnace";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 8;
+ings.push(i);
+i = {};
+i["name"] = "stone-brick";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "steel-furnace";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 2;
+i["amount"] = "sulfur";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "sulfur";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 3;
+i["name"] = "water";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 3;
+i["name"] = "petroleum-gas";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "modular-armor";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 30;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 50;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "modular-armor";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["requester_paste_multiplier"] = 4;
-doc["result"] = "assembling-machine-1";
+doc["name"] = "assembling-machine-1";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "electronic-circuit";
@@ -472,1542 +421,531 @@ i["name"] = "iron-plate";
 i["amount"] = 9;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "assembling-machine-1";
-doc["enabled"] = false;
+doc["result"] = "assembling-machine-1";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "fast-inserter";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "inserter";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fast-inserter";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "sulfur";
-i["amount"] = 2;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 1;
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "petroleum-gas";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "sulfur";
-doc["category"] = "chemistry";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "long-handed-inserter";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "inserter";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "long-handed-inserter";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 5;
-doc["enabled"] = false;
-doc["result"] = "electric-furnace";
-doc["type"] = "recipe";
-doc["name"] = "electric-furnace";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "stone-brick";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 1;
-doc["energy_required"] = 30;
-doc["result"] = "rocket-silo";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1000;
-ings.push(i);
-i = {};
-i["name"] = "concrete";
-i["amount"] = 1000;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 100;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 200;
-ings.push(i);
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 200;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rocket-silo";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "exoskeleton-equipment";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 30;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 20;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "exoskeleton-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "sulfuric-acid";
-i["amount"] = 5;
-res.push(i);
-doc["results"] = res;
-doc["subgroup"] = "fluid-recipes";
-doc["energy_required"] = 1;
-ings = [];
-i = {};
-i["type"] = "item";
-i["name"] = "sulfur";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["type"] = "item";
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "sulfuric-acid";
-doc["category"] = "chemistry";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "plastic-bar";
-i["amount"] = 2;
-res.push(i);
-doc["results"] = res;
-doc["requester_paste_multiplier"] = 4;
-doc["energy_required"] = 1;
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "petroleum-gas";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["type"] = "item";
-i["name"] = "coal";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "plastic-bar";
-doc["category"] = "chemistry";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 5;
-doc["energy_required"] = 8;
-doc["result"] = "advanced-circuit";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "plastic-bar";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "copper-cable";
-i["amount"] = 4;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "advanced-circuit";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "gate";
-ings = [];
-i = {};
-i["name"] = "stone-wall";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "gate";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/heavy-oil-cracking.png";
-doc["main_product"] = "";
-doc["enabled"] = false;
-doc["category"] = "chemistry";
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "light-oil";
-i["amount"] = 3;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 5;
-doc["order"] = "b[fluid-chemistry]-a[heavy-oil-cracking]";
-doc["subgroup"] = "fluid-recipes";
-doc["type"] = "recipe";
-doc["name"] = "heavy-oil-cracking";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "heavy-oil";
-i["amount"] = 4;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "fusion-reactor-equipment";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 100;
-ings.push(i);
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 30;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fusion-reactor-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "rail-chain-signal";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rail-chain-signal";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "rocket-fuel";
-doc["energy_required"] = 30;
-ings = [];
-i = {};
-i["name"] = "solid-fuel";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "rocket-fuel";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 30;
-doc["result"] = "speed-module-2";
-ings = [];
-i = {};
-i["name"] = "speed-module";
-i["amount"] = 4;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "speed-module-2";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "battery";
-doc["energy_required"] = 5;
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "sulfuric-acid";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "battery";
-doc["category"] = "chemistry";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "railgun";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "railgun";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result_count"] = 2;
-doc["result"] = "copper-cable";
-doc["type"] = "recipe";
-doc["name"] = "copper-cable";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "speed-module";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "speed-module";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["energy_required"] = 1;
-doc["result"] = "splitter";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 4;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "splitter";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3.5;
-doc["result"] = "copper-plate";
-ings = [];
-i = {};
-i["name"] = "copper-ore";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "copper-plate";
-doc["category"] = "smelting";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "low-density-structure";
-doc["energy_required"] = 30;
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "plastic-bar";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "low-density-structure";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 1;
-doc["result"] = "loader";
-ings = [];
-i = {};
-i["name"] = "inserter";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "loader";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "slowdown-capsule";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "coal";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "slowdown-capsule";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 20;
-doc["enabled"] = false;
-doc["result"] = "oil-refinery";
-doc["type"] = "recipe";
-doc["name"] = "oil-refinery";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "stone-brick";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "steel-chest";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 8;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "steel-chest";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "small-plane";
-doc["energy_required"] = 30;
-ings = [];
-i = {};
-i["name"] = "plastic-bar";
-i["amount"] = 100;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 200;
-ings.push(i);
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "battery";
-i["amount"] = 100;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "small-plane";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "defender-capsule";
-ings = [];
-i = {};
-i["name"] = "piercing-rounds-magazine";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "defender-capsule";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 30;
-doc["result"] = "productivity-module-2";
-ings = [];
-i = {};
-i["name"] = "productivity-module";
-i["amount"] = 4;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "productivity-module-2";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["result"] = "submachine-gun";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "submachine-gun";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "chemical-plant";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "chemical-plant";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 30;
-doc["result"] = "effectivity-module-2";
-ings = [];
-i = {};
-i["name"] = "effectivity-module";
-i["amount"] = 4;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "effectivity-module-2";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "explosive-rocket";
-ings = [];
-i = {};
-i["name"] = "rocket";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "explosives";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "explosive-rocket";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "destroyer-capsule";
-ings = [];
-i = {};
-i["name"] = "distractor-capsule";
-i["amount"] = 4;
-ings.push(i);
-i = {};
-i["name"] = "speed-module";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "destroyer-capsule";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "car";
-ings = [];
-i = {};
-i["name"] = "engine-unit";
-i["amount"] = 8;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "car";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 5;
-doc["result"] = "science-pack-1";
-doc["type"] = "recipe";
-doc["name"] = "science-pack-1";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "explosive-cannon-shell";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 4;
-ings.push(i);
-i = {};
-i["name"] = "plastic-bar";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "explosives";
-i["amount"] = 4;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "explosive-cannon-shell";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "logistic-chest-active-provider";
-ings = [];
-i = {};
-i["name"] = "steel-chest";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "logistic-chest-active-provider";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "substation";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "substation";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "battery-equipment";
-ings = [];
-i = {};
-i["name"] = "battery";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "battery-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["energy_required"] = 2;
-doc["result"] = "fast-splitter";
-ings = [];
-i = {};
-i["name"] = "splitter";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fast-splitter";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "railgun-dart";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "railgun-dart";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "underground-belt";
-doc["requester_paste_multiplier"] = 4;
-doc["energy_required"] = 1;
-doc["result_count"] = 2;
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "underground-belt";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/advanced-oil-processing.png";
-doc["enabled"] = false;
-doc["category"] = "oil-processing";
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "heavy-oil";
-i["amount"] = 1;
-res.push(i);
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "light-oil";
-i["amount"] = 4.5;
-res.push(i);
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "petroleum-gas";
-i["amount"] = 5.5;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 5;
-doc["order"] = "a[oil-processing]-b[advanced-oil-processing]";
-doc["subgroup"] = "fluid-recipes";
-doc["type"] = "recipe";
-doc["name"] = "advanced-oil-processing";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "crude-oil";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "alien-science-pack";
-doc["energy_required"] = 12;
-doc["result_count"] = 10;
-ings = [];
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "alien-science-pack";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "steam-engine";
-doc["type"] = "recipe";
-doc["name"] = "steam-engine";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["enabled"] = false;
-doc["result"] = "steel-furnace";
-doc["type"] = "recipe";
-doc["name"] = "steel-furnace";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 8;
-ings.push(i);
-i = {};
-i["name"] = "stone-brick";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "fast-transport-belt";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fast-transport-belt";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "logistic-chest-requester";
-ings = [];
-i = {};
-i["name"] = "steel-chest";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "logistic-chest-requester";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "beacon";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "copper-cable";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "beacon";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result"] = "repair-pack";
-doc["type"] = "recipe";
-doc["name"] = "repair-pack";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "roboport";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 45;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 45;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 45;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "roboport";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 20;
-doc["result"] = "flamethrower-turret";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 30;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "engine-unit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "flamethrower-turret";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "player-port";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "player-port";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 12;
-doc["result"] = "science-pack-3";
-ings = [];
-i = {};
-i["name"] = "battery";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "filter-inserter";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "science-pack-3";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "cargo-wagon";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 20;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
 doc["name"] = "cargo-wagon";
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "energy-shield-mk2-equipment";
-ings = [];
-i = {};
-i["name"] = "energy-shield-equipment";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "energy-shield-mk2-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "express-underground-belt";
 ings = [];
 i = {};
 i["name"] = "iron-gear-wheel";
-i["amount"] = 40;
+i["amount"] = 10;
 ings.push(i);
 i = {};
-i["name"] = "fast-underground-belt";
-i["amount"] = 2;
+i["name"] = "iron-plate";
+i["amount"] = 20;
 ings.push(i);
 i = {};
-i["type"] = "fluid";
-i["name"] = "lubricant";
-i["amount"] = 4;
+i["name"] = "steel-plate";
+i["amount"] = 20;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["result_count"] = 2;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "express-underground-belt";
-doc["category"] = "crafting-with-fluid";
+doc["result"] = "cargo-wagon";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 25;
+i["name"] = "crude-oil";
+ings.push(i);
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "empty-barrel";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 1;
+i["amount"] = "crude-oil-barrel";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "fill-crude-oil-barrel";
+doc["subgroup"] = "barrel";
+doc["order"] = "b[fill-crude-oil-barrel]";
+doc["icon"] = "__base__/graphics/icons/fluid/fill-crude-oil-barrel.png";
+db.recipe.insert(doc);
+
+doc = {};
 doc["energy_required"] = 0.5;
-doc["result"] = "electric-energy-interface";
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "steel-chest";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 8;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "steel-chest";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["result"] = "small-plane";
+doc["name"] = "small-plane";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "plastic-bar";
+i["amount"] = 100;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 200;
+ings.push(i);
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "battery";
+i["amount"] = 100;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["result"] = "landfill";
+doc["name"] = "landfill";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stone";
+i["amount"] = 20;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "stone-furnace";
+doc["requester_paste_multiplier"] = 4;
+ings = [];
+i = {};
+i["name"] = "stone";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "stone-furnace";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "distractor-capsule";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "defender-capsule";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 3;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "distractor-capsule";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "solar-panel-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "solar-panel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "solar-panel-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 10;
+i["name"] = "crude-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "oil-processing";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "basic-oil-processing";
+doc["icon"] = "__base__/graphics/icons/fluid/basic-oil-processing.png";
+doc["order"] = "a[oil-processing]-a[basic-oil-processing]";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 3;
+i["amount"] = "heavy-oil";
+res.push(i);
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 3;
+i["amount"] = "light-oil";
+res.push(i);
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 4;
+i["amount"] = "petroleum-gas";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "iron-stick";
+doc["result_count"] = 2;
 ings = [];
 i = {};
 i["name"] = "iron-plate";
-i["amount"] = 2;
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "iron-stick";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["name"] = "oil-refinery";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "stone-brick";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "oil-refinery";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "arithmetic-combinator";
+doc["enabled"] = "false";
+ings = [];
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 5;
 ings.push(i);
 i = {};
 i["name"] = "electronic-circuit";
 i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "electric-energy-interface";
-doc["enabled"] = false;
+doc["result"] = "arithmetic-combinator";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 3.5;
-doc["result"] = "iron-plate";
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["requester_paste_multiplier"] = 4;
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 2;
+i["amount"] = "plastic-bar";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "plastic-bar";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "iron-ore";
+i["type"] = "fluid";
+i["amount"] = 3;
+i["name"] = "petroleum-gas";
+ings.push(i);
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "coal";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 60;
+doc["name"] = "effectivity-module-3";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "effectivity-module-2";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "alien-artifact";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "iron-plate";
-doc["category"] = "smelting";
+doc["result"] = "effectivity-module-3";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["result"] = "electric-engine-unit";
+doc["name"] = "electric-engine-unit";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "engine-unit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 2;
+i["name"] = "lubricant";
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["energy_required"] = 3;
-doc["result"] = "light-armor";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 2;
+i["name"] = "petroleum-gas";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "solid-fuel-from-petroleum-gas";
+doc["icon"] = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png";
+doc["order"] = "b[fluid-chemistry]-d[solid-fuel-from-petroleum-gas]";
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 1;
+i["amount"] = "solid-fuel";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "beacon";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "beacon";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "fast-loader";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "fast-transport-belt";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "loader";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "fast-loader";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 6;
+doc["name"] = "science-pack-2";
+ings = [];
+i = {};
+i["name"] = "inserter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "science-pack-2";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "wood";
+doc["result_count"] = 2;
+ings = [];
+i = {};
+i["name"] = "raw-wood";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "wood";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "poison-capsule";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "coal";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "poison-capsule";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "light-armor";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "iron-plate";
 i["amount"] = 40;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "light-armor";
-doc["enabled"] = false;
+doc["result"] = "light-armor";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "tank";
-ings = [];
-i = {};
-i["name"] = "engine-unit";
-i["amount"] = 16;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 50;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "tank";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-ings = [];
-i = {};
-i["name"] = "concrete";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["result"] = "hazard-concrete";
-doc["energy_required"] = 0.25;
-doc["result_count"] = 10;
-doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "hazard-concrete";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-ings = [];
-i = {};
-i["name"] = "stone-brick";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-ore";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["result"] = "concrete";
-doc["energy_required"] = 10;
-doc["result_count"] = 10;
-doc["category"] = "crafting-with-fluid";
-doc["type"] = "recipe";
-doc["name"] = "concrete";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
 doc["requester_paste_multiplier"] = 4;
-doc["result"] = "assembling-machine-2";
+doc["name"] = "assembling-machine-2";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "iron-plate";
@@ -2026,19 +964,548 @@ i["name"] = "assembling-machine-1";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "assembling-machine-2";
-doc["enabled"] = false;
+doc["result"] = "assembling-machine-2";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "defender-capsule";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "piercing-rounds-magazine";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 3;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "defender-capsule";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["requester_paste_multiplier"] = 1;
+doc["name"] = "power-armor";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "alien-artifact";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "power-armor";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["energy_required"] = 10;
-doc["result"] = "energy-shield-equipment";
+doc["name"] = "gun-turret";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 20;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "gun-turret";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "logistic-chest-passive-provider";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-chest";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "logistic-chest-passive-provider";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["result_count"] = 4;
+doc["name"] = "land-mine";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "explosives";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "land-mine";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "slowdown-capsule";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "coal";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "slowdown-capsule";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "tank";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "engine-unit";
+i["amount"] = 16;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 50;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "tank";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "green-wire";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "green-wire";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "stone-wall";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stone-brick";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "stone-wall";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3.5;
+doc["result"] = "stone-brick";
+doc["name"] = "stone-brick";
+doc["enabled"] = true;
+ings = [];
+i = {};
+i["name"] = "stone";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "smelting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 2;
+i["name"] = "heavy-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "solid-fuel-from-heavy-oil";
+doc["icon"] = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png";
+doc["order"] = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]";
+res = [];
+i = {};
+i["amount"] = "item";
+i["amount"] = 1;
+i["amount"] = "solid-fuel";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "burner-inserter";
+doc["requester_paste_multiplier"] = 4;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "burner-inserter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "personal-roboport-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 40;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "battery";
+i["amount"] = 45;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "personal-roboport-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["result"] = "express-splitter";
+doc["name"] = "express-splitter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "fast-splitter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 8;
+i["name"] = "lubricant";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["result"] = "rocket-control-unit";
+doc["name"] = "rocket-control-unit";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "speed-module";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "rocket";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "explosives";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rocket";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["result"] = "rocket-fuel";
+doc["name"] = "rocket-fuel";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "solid-fuel";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["subgroup"] = "fluid-recipes";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 1;
+i["amount"] = "lubricant";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "lubricant";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 1;
+i["name"] = "heavy-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["name"] = "flying-robot-frame";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "battery";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "flying-robot-frame";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "solar-panel";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "solar-panel";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "rail-signal";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rail-signal";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "productivity-module";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "productivity-module";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "rail-chain-signal";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rail-chain-signal";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "battery-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "battery";
 i["amount"] = 5;
 ings.push(i);
 i = {};
@@ -2046,40 +1513,400 @@ i["name"] = "steel-plate";
 i["amount"] = 10;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "energy-shield-equipment";
-doc["enabled"] = false;
+doc["result"] = "battery-equipment";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "cannon-shell";
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["name"] = "lab";
 ings = [];
 i = {};
-i["name"] = "steel-plate";
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
 i["amount"] = 4;
 ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "lab";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "effectivity-module";
+doc["enabled"] = false;
+ings = [];
 i = {};
-i["name"] = "plastic-bar";
-i["amount"] = 2;
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
 ings.push(i);
 i = {};
-i["name"] = "explosives";
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "effectivity-module";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "express-loader";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "express-transport-belt";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "fast-loader";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "cannon-shell";
-doc["enabled"] = false;
+doc["result"] = "express-loader";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "satellite";
+doc["type"] = "recipe";
+doc["result"] = "steam-engine";
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["name"] = "steam-engine";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["name"] = "firearm-magazine";
+doc["result_count"] = 1;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "firearm-magazine";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["result"] = "explosives";
+doc["name"] = "explosives";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "sulfur";
+ings.push(i);
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "coal";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 1;
+i["name"] = "water";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "assembling-machine-3";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "speed-module";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "assembling-machine-2";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "assembling-machine-3";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 12;
+doc["name"] = "science-pack-3";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "battery";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "filter-inserter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "science-pack-3";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "exoskeleton-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 30;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 20;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "exoskeleton-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["name"] = "flamethrower-turret";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 30;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "engine-unit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "flamethrower-turret";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["name"] = "loader";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "inserter";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "loader";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["name"] = "laser-turret";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "battery";
+i["amount"] = 12;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "laser-turret";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["name"] = "science-pack-1";
+ings = [];
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "science-pack-1";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "flame-thrower";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "flame-thrower";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 3;
+i["name"] = "water";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 4;
+i["name"] = "heavy-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+doc["main_product"] = "";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "heavy-oil-cracking";
+doc["icon"] = "__base__/graphics/icons/fluid/heavy-oil-cracking.png";
+doc["order"] = "b[fluid-chemistry]-a[heavy-oil-cracking]";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 3;
+i["amount"] = "light-oil";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["result_count"] = 10;
+doc["result"] = "concrete";
+doc["name"] = "concrete";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stone-brick";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-ore";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 10;
+i["name"] = "water";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["energy_required"] = 3;
+doc["result"] = "satellite";
+doc["name"] = "satellite";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "low-density-structure";
@@ -2107,91 +1934,118 @@ i["amount"] = 50;
 ings.push(i);
 doc["ingredients"] = ings;
 doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "satellite";
-doc["enabled"] = false;
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "rocket-control-unit";
-doc["energy_required"] = 30;
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "speed-module";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "crafting";
 doc["type"] = "recipe";
-doc["name"] = "rocket-control-unit";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "express-splitter";
-doc["energy_required"] = 2;
+doc["name"] = "repair-pack";
+doc["requester_paste_multiplier"] = 10;
 ings = [];
 i = {};
-i["name"] = "fast-splitter";
+i["name"] = "electronic-circuit";
 i["amount"] = 1;
 ings.push(i);
 i = {};
 i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "repair-pack";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "railgun";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
 i["amount"] = 10;
 ings.push(i);
 i = {};
 i["name"] = "advanced-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "lubricant";
-i["amount"] = 8;
+i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "express-splitter";
-doc["category"] = "crafting-with-fluid";
+doc["result"] = "railgun";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "poison-capsule";
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["result"] = "rocket-part";
+doc["category"] = "rocket-building";
+doc["name"] = "rocket-part";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "low-density-structure";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "rocket-fuel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "rocket-control-unit";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["hidden"] = true;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["result"] = "low-density-structure";
+doc["name"] = "low-density-structure";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "steel-plate";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "coal";
 i["amount"] = 10;
 ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "plastic-bar";
+i["amount"] = 5;
+ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "poison-capsule";
-doc["enabled"] = false;
+doc["category"] = "crafting";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "constant-combinator";
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["name"] = "power-switch";
+doc["enabled"] = "false";
 ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
 i = {};
 i["name"] = "copper-cable";
 i["amount"] = 5;
@@ -2201,15 +2055,35 @@ i["name"] = "electronic-circuit";
 i["amount"] = 2;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "power-switch";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "energy-shield-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "energy-shield-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
 doc["type"] = "recipe";
 doc["name"] = "constant-combinator";
 doc["enabled"] = "false";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "decider-combinator";
 ings = [];
 i = {};
 i["name"] = "copper-cable";
@@ -2217,37 +2091,38 @@ i["amount"] = 5;
 ings.push(i);
 i = {};
 i["name"] = "electronic-circuit";
-i["amount"] = 5;
+i["amount"] = 2;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "constant-combinator";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "piercing-rounds-magazine";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "piercing-rounds-magazine";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
 doc["type"] = "recipe";
 doc["name"] = "decider-combinator";
 doc["enabled"] = "false";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result"] = "electronic-circuit";
-doc["type"] = "recipe";
-doc["name"] = "electronic-circuit";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "copper-cable";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "arithmetic-combinator";
 ings = [];
 i = {};
 i["name"] = "copper-cable";
@@ -2258,470 +2133,100 @@ i["name"] = "electronic-circuit";
 i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "arithmetic-combinator";
-doc["enabled"] = "false";
+doc["result"] = "decider-combinator";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["enabled"] = false;
-doc["category"] = "crafting";
-doc["subgroup"] = "barrel";
-doc["energy_required"] = 1;
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "empty-barrel";
-i["amount"] = 1;
-res.push(i);
-doc["results"] = res;
 doc["type"] = "recipe";
-doc["name"] = "empty-barrel";
-ings = [];
-i = {};
-i["type"] = "item";
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 2;
-doc["result_count"] = 1;
-doc["result"] = "firearm-magazine";
-doc["type"] = "recipe";
-doc["name"] = "firearm-magazine";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 2;
-doc["result"] = "small-pump";
-ings = [];
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "small-pump";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
 doc["energy_required"] = 10;
-doc["result"] = "gun-turret";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 20;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "gun-turret";
+doc["name"] = "night-vision-equipment";
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["result"] = "storage-tank";
 ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "storage-tank";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "distractor-capsule";
-ings = [];
-i = {};
-i["name"] = "defender-capsule";
-i["amount"] = 4;
-ings.push(i);
 i = {};
 i["name"] = "advanced-circuit";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "distractor-capsule";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 2;
-doc["result"] = "power-switch";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
 i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "copper-cable";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "power-switch";
-doc["enabled"] = "false";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 20;
-doc["enabled"] = false;
-doc["result"] = "flying-robot-frame";
-doc["type"] = "recipe";
-doc["name"] = "flying-robot-frame";
-ings = [];
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "battery";
-i["amount"] = 2;
 ings.push(i);
 i = {};
 i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 2;
-doc["result"] = "electric-mining-drill";
-doc["type"] = "recipe";
-doc["name"] = "electric-mining-drill";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
 i["amount"] = 10;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "night-vision-equipment";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
 doc["enabled"] = false;
-doc["energy_required"] = 20;
-doc["result"] = "electric-engine-unit";
 ings = [];
 i = {};
-i["name"] = "engine-unit";
-i["amount"] = 1;
+i["type"] = "fluid";
+i["amount"] = 3;
+i["name"] = "water";
 ings.push(i);
 i = {};
 i["type"] = "fluid";
-i["name"] = "lubricant";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 2;
+i["amount"] = 3;
+i["name"] = "light-oil";
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "electric-engine-unit";
-doc["category"] = "crafting-with-fluid";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["enabled"] = false;
-doc["energy_required"] = 20;
-doc["result"] = "engine-unit";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "engine-unit";
-doc["category"] = "advanced-crafting";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 20;
-doc["enabled"] = false;
-doc["result"] = "pumpjack";
-doc["type"] = "recipe";
-doc["name"] = "pumpjack";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "pipe";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 1;
-doc["enabled"] = false;
-doc["result"] = "deconstruction-planner";
-doc["type"] = "recipe";
-doc["name"] = "deconstruction-planner";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 5;
-doc["enabled"] = false;
-doc["result"] = "blueprint-book";
-doc["type"] = "recipe";
-doc["name"] = "blueprint-book";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 15;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "medium-electric-pole";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "medium-electric-pole";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "accumulator";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "battery";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "accumulator";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 1;
-doc["enabled"] = false;
-doc["result"] = "blueprint";
-doc["type"] = "recipe";
-doc["name"] = "blueprint";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 1;
-doc["energy_required"] = 20;
-doc["result"] = "power-armor";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 40;
-ings.push(i);
-i = {};
-i["name"] = "electric-engine-unit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 40;
-ings.push(i);
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "power-armor";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
+doc["category"] = "chemistry";
+doc["main_product"] = "";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "light-oil-cracking";
+doc["icon"] = "__base__/graphics/icons/fluid/light-oil-cracking.png";
+doc["order"] = "b[fluid-chemistry]-b[light-oil-cracking]";
 res = [];
 i = {};
 i["amount"] = "fluid";
-i["amount"] = "lubricant";
-i["amount"] = 1;
+i["amount"] = 2;
+i["amount"] = "petroleum-gas";
 res.push(i);
 doc["results"] = res;
-doc["subgroup"] = "fluid-recipes";
-doc["energy_required"] = 1;
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "heavy-oil";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "lubricant";
-doc["category"] = "chemistry";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "cluster-grenade";
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "roboport";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "grenade";
-i["amount"] = 7;
+i["name"] = "steel-plate";
+i["amount"] = 45;
 ings.push(i);
 i = {};
-i["name"] = "explosives";
-i["amount"] = 5;
+i["name"] = "iron-gear-wheel";
+i["amount"] = 45;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 45;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "roboport";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["name"] = "small-pump";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 1;
 ings.push(i);
 i = {};
 i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "cluster-grenade";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "boiler";
-doc["type"] = "recipe";
-doc["name"] = "boiler";
-ings = [];
-i = {};
-i["name"] = "stone-furnace";
 i["amount"] = 1;
 ings.push(i);
 i = {};
@@ -2729,33 +2234,16 @@ i["name"] = "pipe";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "small-pump";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "big-electric-pole";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "big-electric-pole";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
 doc["energy_required"] = 8;
-doc["result"] = "grenade";
+doc["name"] = "grenade";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "iron-plate";
@@ -2766,518 +2254,565 @@ i["name"] = "coal";
 i["amount"] = 10;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "grenade";
-doc["enabled"] = false;
+doc["result"] = "grenade";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 5;
-doc["result"] = "rocket-launcher";
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "storage-tank";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rocket-launcher";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "diesel-locomotive";
-ings = [];
-i = {};
-i["name"] = "engine-unit";
 i["amount"] = 20;
 ings.push(i);
 i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 30;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "diesel-locomotive";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "personal-laser-defense-equipment";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
 i["name"] = "steel-plate";
 i["amount"] = 5;
 ings.push(i);
-i = {};
-i["name"] = "laser-turret";
-i["amount"] = 5;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "personal-laser-defense-equipment";
-doc["enabled"] = false;
+doc["result"] = "storage-tank";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "logistic-chest-storage";
-ings = [];
-i = {};
-i["name"] = "steel-chest";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "logistic-chest-storage";
+doc["energy_required"] = 5;
+doc["result"] = "battery";
+doc["name"] = "battery";
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "logistic-chest-passive-provider";
 ings = [];
 i = {};
-i["name"] = "steel-chest";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "logistic-chest-passive-provider";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "radar";
-doc["type"] = "recipe";
-doc["name"] = "radar";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
+i["type"] = "fluid";
+i["amount"] = 2;
+i["name"] = "sulfuric-acid";
 ings.push(i);
 i = {};
 i["name"] = "iron-plate";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "logistic-robot";
-ings = [];
-i = {};
-i["name"] = "flying-robot-frame";
 i["amount"] = 1;
 ings.push(i);
 i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "logistic-robot";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "explosives";
-doc["energy_required"] = 5;
-ings = [];
-i = {};
-i["type"] = "item";
-i["name"] = "sulfur";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["type"] = "item";
-i["name"] = "coal";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
+i["name"] = "copper-plate";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
 doc["category"] = "chemistry";
-doc["type"] = "recipe";
-doc["name"] = "explosives";
-doc["enabled"] = false;
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "express-loader";
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "speed-module";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "express-transport-belt";
+i["name"] = "advanced-circuit";
 i["amount"] = 5;
 ings.push(i);
 i = {};
-i["name"] = "fast-loader";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "express-loader";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "discharge-defense-equipment";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
+i["name"] = "electronic-circuit";
 i["amount"] = 5;
 ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "laser-turret";
-i["amount"] = 10;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "discharge-defense-equipment";
-doc["enabled"] = false;
+doc["result"] = "speed-module";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "piercing-shotgun-shell";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "piercing-shotgun-shell";
+doc["name"] = "car";
 doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result"] = "iron-gear-wheel";
-doc["type"] = "recipe";
-doc["name"] = "iron-gear-wheel";
 ings = [];
+i = {};
+i["name"] = "engine-unit";
+i["amount"] = 8;
+ings.push(i);
 i = {};
 i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "fast-underground-belt";
-doc["result_count"] = 2;
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
 i["amount"] = 20;
 ings.push(i);
 i = {};
-i["name"] = "underground-belt";
-i["amount"] = 2;
+i["name"] = "steel-plate";
+i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "fast-underground-belt";
-doc["enabled"] = false;
+doc["result"] = "car";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result"] = "green-wire";
+doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["result"] = "processing-unit";
+doc["name"] = "processing-unit";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "electronic-circuit";
-i["amount"] = 1;
+i["amount"] = 20;
 ings.push(i);
 i = {};
-i["name"] = "copper-cable";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "green-wire";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "express-transport-belt";
-ings = [];
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "fast-transport-belt";
-i["amount"] = 1;
+i["name"] = "advanced-circuit";
+i["amount"] = 2;
 ings.push(i);
 i = {};
 i["type"] = "fluid";
-i["name"] = "lubricant";
-i["amount"] = 2;
+i["amount"] = 0.5;
+i["name"] = "sulfuric-acid";
 ings.push(i);
 doc["ingredients"] = ings;
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "express-transport-belt";
 doc["category"] = "crafting-with-fluid";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result_count"] = 2;
-doc["result"] = "iron-stick";
 doc["type"] = "recipe";
-doc["name"] = "iron-stick";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "copper-cable";
+doc["result_count"] = 2;
 ings = [];
 i = {};
-i["name"] = "iron-plate";
+i["name"] = "copper-plate";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "copper-cable";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "wooden-chest";
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["name"] = "deconstruction-planner";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "deconstruction-planner";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["name"] = "blueprint-book";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 15;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "blueprint-book";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["name"] = "blueprint";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "blueprint";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
 doc["type"] = "recipe";
 doc["name"] = "wooden-chest";
+doc["requester_paste_multiplier"] = 4;
 ings = [];
 i = {};
 i["name"] = "wood";
 i["amount"] = 4;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "wooden-chest";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result_count"] = 2;
-doc["result"] = "pipe-to-ground";
 doc["type"] = "recipe";
-doc["name"] = "pipe-to-ground";
+doc["energy_required"] = 8;
+doc["name"] = "explosive-rocket";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "pipe";
-i["amount"] = 10;
+i["name"] = "rocket";
+i["amount"] = 1;
 ings.push(i);
 i = {};
-i["name"] = "iron-plate";
+i["name"] = "explosives";
 i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "explosive-rocket";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 20;
-doc["result"] = "laser-turret";
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "long-handed-inserter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "inserter";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "long-handed-inserter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "medium-electric-pole";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "steel-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "battery";
-i["amount"] = 12;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "laser-turret";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "heavy-oil";
 i["amount"] = 2;
 ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "chemistry";
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "solid-fuel";
-i["amount"] = 1;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 3;
-doc["order"] = "b[fluid-chemistry]-e[solid-fuel-from-heavy-oil]";
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "solid-fuel-from-heavy-oil";
-doc["subgroup"] = "fluid-recipes";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["result"] = "shotgun-shell";
-ings = [];
 i = {};
 i["name"] = "copper-plate";
 i["amount"] = 2;
 ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "shotgun-shell";
-doc["enabled"] = false;
+doc["result"] = "medium-electric-pole";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "steel-plate";
-doc["energy_required"] = 17.5;
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["enabled"] = false;
 doc["type"] = "recipe";
-doc["name"] = "steel-plate";
-doc["category"] = "smelting";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 60;
-doc["result"] = "speed-module-3";
+doc["name"] = "substation";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "speed-module-2";
-i["amount"] = 4;
+i["name"] = "steel-plate";
+i["amount"] = 10;
 ings.push(i);
 i = {};
 i["name"] = "advanced-circuit";
 i["amount"] = 5;
 ings.push(i);
 i = {};
-i["name"] = "processing-unit";
+i["name"] = "copper-plate";
 i["amount"] = 5;
 ings.push(i);
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 1;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "speed-module-3";
-doc["enabled"] = false;
+doc["result"] = "substation";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["requester_paste_multiplier"] = 4;
-doc["result"] = "stack-inserter";
+doc["name"] = "big-electric-pole";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "big-electric-pole";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "steel-axe";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-stick";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "steel-axe";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "small-lamp";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-stick";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "small-lamp";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "cannon-shell";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "plastic-bar";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "explosives";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "cannon-shell";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 4;
+doc["name"] = "shotgun";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "wood";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "shotgun";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "chemical-plant";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "chemical-plant";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "filter-inserter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "fast-inserter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 4;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "filter-inserter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "combat-shotgun";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "wood";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "combat-shotgun";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["requester_paste_multiplier"] = 1;
+doc["name"] = "rocket-silo";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1000;
+ings.push(i);
+i = {};
+i["name"] = "concrete";
+i["amount"] = 1000;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 100;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 200;
+ings.push(i);
+i = {};
+i["name"] = "electric-engine-unit";
+i["amount"] = 200;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rocket-silo";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "logistic-chest-requester";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-chest";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "logistic-chest-requester";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "heavy-armor";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 100;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 50;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "heavy-armor";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "stack-inserter";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "iron-gear-wheel";
@@ -3296,16 +2831,454 @@ i["name"] = "fast-inserter";
 i["amount"] = 1;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "stack-inserter";
-doc["enabled"] = false;
+doc["result"] = "stack-inserter";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["name"] = "effectivity-module-2";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "effectivity-module";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "effectivity-module-2";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "logistic-chest-storage";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-chest";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "logistic-chest-storage";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "logistic-robot";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "flying-robot-frame";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "logistic-robot";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "logistic-chest-active-provider";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-chest";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 3;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "logistic-chest-active-provider";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "construction-robot";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "flying-robot-frame";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "construction-robot";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 20;
+doc["name"] = "pumpjack";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "pumpjack";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["requester_paste_multiplier"] = 5;
+doc["name"] = "advanced-circuit";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "plastic-bar";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 4;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "advanced-circuit";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "iron-gear-wheel";
+doc["requester_paste_multiplier"] = 10;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "iron-gear-wheel";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
 doc["energy_required"] = 10;
-doc["result"] = "battery-mk2-equipment";
+doc["name"] = "fusion-reactor-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 100;
+ings.push(i);
+i = {};
+i["name"] = "alien-artifact";
+i["amount"] = 30;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "fusion-reactor-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "fast-splitter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "splitter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "fast-splitter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["result"] = "fast-underground-belt";
+doc["name"] = "fast-underground-belt";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "underground-belt";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result_count"] = 2;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "splitter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
+i["amount"] = 4;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "splitter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "transport-belt";
+doc["result_count"] = 2;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "transport-belt";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "train-stop";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 3;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "train-stop";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "pipe-to-ground";
+doc["result"] = "pipe-to-ground";
+ings = [];
+i = {};
+i["name"] = "pipe";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result_count"] = 2;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "small-electric-pole";
+doc["result_count"] = 2;
+ings = [];
+i = {};
+i["name"] = "wood";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "small-electric-pole";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["result"] = "iron-axe";
+ings = [];
+i = {};
+i["name"] = "iron-stick";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 3;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["name"] = "iron-axe";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["name"] = "electric-furnace";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 15;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "stone-brick";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "electric-furnace";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "discharge-defense-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "laser-turret";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "discharge-defense-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "stack-filter-inserter";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stack-inserter";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "stack-filter-inserter";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "battery-mk2-equipment";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "battery-equipment";
@@ -3316,17 +3289,526 @@ i["name"] = "processing-unit";
 i["amount"] = 20;
 ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "battery-mk2-equipment";
-doc["enabled"] = false;
+doc["result"] = "battery-mk2-equipment";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 2;
-doc["result"] = "burner-mining-drill";
 doc["type"] = "recipe";
+doc["energy_required"] = 15;
+doc["name"] = "destroyer-capsule";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "distractor-capsule";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "speed-module";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "destroyer-capsule";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["result"] = "boiler";
+ings = [];
+i = {};
+i["name"] = "stone-furnace";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["name"] = "boiler";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["requester_paste_multiplier"] = 4;
+doc["result"] = "underground-belt";
+doc["name"] = "underground-belt";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result_count"] = 2;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 10;
+doc["name"] = "red-wire";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "copper-cable";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "red-wire";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "cluster-grenade";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "grenade";
+i["amount"] = 7;
+ings.push(i);
+i = {};
+i["name"] = "explosives";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "cluster-grenade";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 12;
+doc["result_count"] = 10;
+doc["name"] = "alien-science-pack";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "alien-artifact";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "alien-science-pack";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 0.5;
+doc["name"] = "electric-energy-interface";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "electric-energy-interface";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["subgroup"] = "fluid-recipes";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 5;
+i["amount"] = "sulfuric-acid";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "sulfuric-acid";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "item";
+i["amount"] = 5;
+i["name"] = "sulfur";
+ings.push(i);
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "iron-plate";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 10;
+i["name"] = "water";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "fluid";
+i["amount"] = 5;
+i["name"] = "water";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 10;
+i["name"] = "crude-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "oil-processing";
+doc["subgroup"] = "fluid-recipes";
+doc["name"] = "advanced-oil-processing";
+doc["icon"] = "__base__/graphics/icons/fluid/advanced-oil-processing.png";
+doc["order"] = "a[oil-processing]-b[advanced-oil-processing]";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 1;
+i["amount"] = "heavy-oil";
+res.push(i);
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 4.5;
+i["amount"] = "light-oil";
+res.push(i);
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 5.5;
+i["amount"] = "petroleum-gas";
+res.push(i);
+doc["results"] = res;
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3.5;
+doc["name"] = "iron-plate";
+doc["result"] = "iron-plate";
+ings = [];
+i = {};
+i["name"] = "iron-ore";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "smelting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["result"] = "offshore-pump";
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "pipe";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["name"] = "offshore-pump";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "personal-laser-defense-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "laser-turret";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "personal-laser-defense-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 5;
+doc["name"] = "rocket-launcher";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rocket-launcher";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 0.25;
+doc["result_count"] = 10;
+doc["result"] = "hazard-concrete";
+doc["name"] = "hazard-concrete";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "concrete";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "pipe";
+doc["requester_paste_multiplier"] = 4;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "pipe";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 17.5;
+doc["result"] = "steel-plate";
+doc["name"] = "steel-plate";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "smelting";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "piercing-shotgun-shell";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "piercing-shotgun-shell";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 10;
+doc["name"] = "energy-shield-mk2-equipment";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "energy-shield-equipment";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "energy-shield-mk2-equipment";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "player-port";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "player-port";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "diesel-locomotive";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "engine-unit";
+i["amount"] = 20;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 30;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "diesel-locomotive";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "fast-transport-belt";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "transport-belt";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "fast-transport-belt";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["name"] = "speed-module-2";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "speed-module";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "speed-module-2";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 60;
+doc["name"] = "speed-module-3";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "speed-module-2";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "alien-artifact";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "speed-module-3";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 2;
 doc["name"] = "burner-mining-drill";
 ings = [];
 i = {};
@@ -3342,3753 +3824,3271 @@ i["name"] = "iron-plate";
 i["amount"] = 3;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "burner-mining-drill";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["result"] = "offshore-pump";
 doc["type"] = "recipe";
-doc["name"] = "offshore-pump";
+doc["energy_required"] = 1;
+doc["name"] = "pistol";
+ings = [];
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "pistol";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "gate";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stone-wall";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 2;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "gate";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["result_count"] = 2;
+doc["name"] = "rail";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "stone";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "iron-stick";
+i["amount"] = 1;
+ings.push(i);
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 1;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "rail";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["name"] = "radar";
+doc["requester_paste_multiplier"] = 4;
+ings = [];
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "radar";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["requester_paste_multiplier"] = 4;
+doc["name"] = "fast-inserter";
+doc["enabled"] = false;
 ings = [];
 i = {};
 i["name"] = "electronic-circuit";
 i["amount"] = 2;
 ings.push(i);
 i = {};
-i["name"] = "pipe";
-i["amount"] = 1;
+i["name"] = "iron-plate";
+i["amount"] = 2;
 ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 6;
-doc["result"] = "science-pack-2";
-doc["type"] = "recipe";
-doc["name"] = "science-pack-2";
-ings = [];
 i = {};
 i["name"] = "inserter";
 i["amount"] = 1;
 ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 1;
-ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "fast-inserter";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["energy_required"] = 3;
-doc["result"] = "fast-loader";
-ings = [];
-i = {};
-i["name"] = "fast-transport-belt";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "loader";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
 doc["type"] = "recipe";
-doc["name"] = "fast-loader";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 5;
-doc["result"] = "lab";
-doc["type"] = "recipe";
-doc["name"] = "lab";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "transport-belt";
-i["amount"] = 4;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "rocket";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "explosives";
-i["amount"] = 2;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rocket";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/basic-oil-processing.png";
-doc["enabled"] = false;
-doc["category"] = "oil-processing";
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "heavy-oil";
-i["amount"] = 3;
-res.push(i);
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "light-oil";
-i["amount"] = 3;
-res.push(i);
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "petroleum-gas";
-i["amount"] = 4;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 5;
-doc["order"] = "a[oil-processing]-a[basic-oil-processing]";
-doc["subgroup"] = "fluid-recipes";
-doc["type"] = "recipe";
-doc["name"] = "basic-oil-processing";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "crude-oil";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "steel-axe";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-stick";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "steel-axe";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "petroleum-gas";
-i["amount"] = 2;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "chemistry";
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "solid-fuel";
-i["amount"] = 1;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 3;
-doc["order"] = "b[fluid-chemistry]-d[solid-fuel-from-petroleum-gas]";
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "solid-fuel-from-petroleum-gas";
-doc["subgroup"] = "fluid-recipes";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "pipe";
-doc["type"] = "recipe";
-doc["name"] = "pipe";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
+doc["name"] = "electronic-circuit";
 doc["requester_paste_multiplier"] = 10;
-doc["result"] = "stone-wall";
-ings = [];
-i = {};
-i["name"] = "stone-brick";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "stone-wall";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 1;
-doc["result"] = "pistol";
-doc["type"] = "recipe";
-doc["name"] = "pistol";
-ings = [];
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "personal-roboport-equipment";
-ings = [];
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 40;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 20;
-ings.push(i);
-i = {};
-i["name"] = "battery";
-i["amount"] = 45;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "personal-roboport-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/light-oil-cracking.png";
-doc["main_product"] = "";
-doc["enabled"] = false;
-doc["category"] = "chemistry";
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "petroleum-gas";
-i["amount"] = 2;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 5;
-doc["order"] = "b[fluid-chemistry]-b[light-oil-cracking]";
-doc["subgroup"] = "fluid-recipes";
-doc["type"] = "recipe";
-doc["name"] = "light-oil-cracking";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "water";
-i["amount"] = 3;
-ings.push(i);
-i = {};
-i["type"] = "fluid";
-i["name"] = "light-oil";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 1;
-doc["energy_required"] = 25;
-doc["result"] = "power-armor-mk2";
-ings = [];
-i = {};
-i["name"] = "effectivity-module-3";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "speed-module-3";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 40;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 40;
-ings.push(i);
-i = {};
-i["name"] = "alien-artifact";
-i["amount"] = 50;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "power-armor-mk2";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/solid-fuel-from-light-oil.png";
-ings = [];
-i = {};
-i["type"] = "fluid";
-i["name"] = "light-oil";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["category"] = "chemistry";
-res = [];
-i = {};
-i["amount"] = "item";
-i["amount"] = "solid-fuel";
-i["amount"] = 1;
-res.push(i);
-doc["results"] = res;
-doc["energy_required"] = 3;
-doc["order"] = "b[fluid-chemistry]-c[solid-fuel-from-light-oil]";
-doc["enabled"] = false;
-doc["type"] = "recipe";
-doc["name"] = "solid-fuel-from-light-oil";
-doc["subgroup"] = "fluid-recipes";
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "modular-armor";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 30;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 50;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "modular-armor";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result_count"] = 2;
-doc["result"] = "transport-belt";
-doc["type"] = "recipe";
-doc["name"] = "transport-belt";
 ings = [];
 i = {};
 i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result_count"] = 2;
-doc["result"] = "wood";
-doc["type"] = "recipe";
-doc["name"] = "wood";
-ings = [];
-i = {};
-i["name"] = "raw-wood";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "iron-chest";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 8;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "iron-chest";
-doc["enabled"] = true;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "rail-signal";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "rail-signal";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 8;
-doc["result"] = "combat-shotgun";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "wood";
-i["amount"] = 10;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "combat-shotgun";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "train-stop";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 10;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 3;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "train-stop";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "burner-inserter";
-doc["type"] = "recipe";
-doc["name"] = "burner-inserter";
-ings = [];
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "stack-filter-inserter";
-ings = [];
-i = {};
-i["name"] = "stack-inserter";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "stack-filter-inserter";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "solar-panel";
-ings = [];
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 15;
-ings.push(i);
-i = {};
-i["name"] = "copper-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "solar-panel";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["icon"] = "__base__/graphics/icons/fluid/empty-crude-oil-barrel.png";
-doc["order"] = "c[empty-crude-oil-barrel]";
-doc["category"] = "crafting-with-fluid";
-doc["subgroup"] = "barrel";
-doc["energy_required"] = 1;
-res = [];
-i = {};
-i["amount"] = "fluid";
-i["amount"] = "crude-oil";
-i["amount"] = 25;
-res.push(i);
-i = {};
-i["amount"] = "item";
-i["amount"] = "empty-barrel";
-i["amount"] = 1;
-res.push(i);
-doc["results"] = res;
-ings = [];
-i = {};
-i["type"] = "item";
-i["name"] = "crude-oil-barrel";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "empty-crude-oil-barrel";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 10;
-doc["result"] = "solar-panel-equipment";
-ings = [];
-i = {};
-i["name"] = "solar-panel";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "processing-unit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "steel-plate";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "solar-panel-equipment";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "effectivity-module";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "effectivity-module";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["energy_required"] = 15;
-doc["result"] = "productivity-module";
-ings = [];
-i = {};
-i["name"] = "advanced-circuit";
-i["amount"] = 5;
-ings.push(i);
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 5;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "productivity-module";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 10;
-doc["result"] = "red-wire";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
 i["amount"] = 1;
 ings.push(i);
 i = {};
 i["name"] = "copper-cable";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "red-wire";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-ings = [];
-i = {};
-i["name"] = "stone";
-i["amount"] = 20;
-ings.push(i);
-doc["ingredients"] = ings;
-doc["result"] = "landfill";
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["category"] = "crafting";
-doc["type"] = "recipe";
-doc["name"] = "landfill";
-doc["enabled"] = false;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "inserter";
-doc["type"] = "recipe";
-doc["name"] = "inserter";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-gear-wheel";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
-doc["ingredients"] = ings;
-db.recipe.insert(doc);
-
-doc = {};
-doc["energy_required"] = 0.5;
-doc["result_count"] = 1;
-doc["result"] = "small-lamp";
-ings = [];
-i = {};
-i["name"] = "electronic-circuit";
-i["amount"] = 1;
-ings.push(i);
-i = {};
-i["name"] = "iron-stick";
 i["amount"] = 3;
 ings.push(i);
-i = {};
-i["name"] = "iron-plate";
-i["amount"] = 1;
-ings.push(i);
 doc["ingredients"] = ings;
-doc["type"] = "recipe";
-doc["name"] = "small-lamp";
-doc["enabled"] = false;
+doc["result"] = "electronic-circuit";
 db.recipe.insert(doc);
 
 doc = {};
 doc["energy_required"] = 0.5;
 doc["result_count"] = 1;
-doc["requester_paste_multiplier"] = 4;
-doc["result"] = "stone-furnace";
 doc["type"] = "recipe";
-doc["name"] = "stone-furnace";
+doc["energy_required"] = 3;
+doc["result"] = "flame-thrower-ammo";
+doc["name"] = "flame-thrower-ammo";
+doc["enabled"] = false;
 ings = [];
 i = {};
-i["name"] = "stone";
+i["type"] = "item";
+i["amount"] = 5;
+i["name"] = "iron-plate";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 2.5;
+i["name"] = "light-oil";
+ings.push(i);
+i = {};
+i["type"] = "fluid";
+i["amount"] = 2.5;
+i["name"] = "heavy-oil";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "chemistry";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 3;
+doc["name"] = "submachine-gun";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "iron-gear-wheel";
+i["amount"] = 10;
+ings.push(i);
+i = {};
+i["name"] = "copper-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "iron-plate";
+i["amount"] = 10;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "submachine-gun";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "explosive-cannon-shell";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "plastic-bar";
+i["amount"] = 2;
+ings.push(i);
+i = {};
+i["name"] = "explosives";
+i["amount"] = 4;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "explosive-cannon-shell";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 1;
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["type"] = "item";
+i["amount"] = 1;
+i["name"] = "crude-oil-barrel";
+ings.push(i);
+doc["ingredients"] = ings;
+doc["category"] = "crafting-with-fluid";
+res = [];
+i = {};
+i["amount"] = "fluid";
+i["amount"] = 25;
+i["amount"] = "crude-oil";
+res.push(i);
+i = {};
+i["amount"] = "item";
+i["amount"] = 1;
+i["amount"] = "empty-barrel";
+res.push(i);
+doc["results"] = res;
+doc["name"] = "empty-crude-oil-barrel";
+doc["subgroup"] = "barrel";
+doc["order"] = "c[empty-crude-oil-barrel]";
+doc["icon"] = "__base__/graphics/icons/fluid/empty-crude-oil-barrel.png";
+db.recipe.insert(doc);
+
+doc = {};
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 30;
+doc["name"] = "productivity-module-2";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "productivity-module";
+i["amount"] = 4;
+ings.push(i);
+i = {};
+i["name"] = "advanced-circuit";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "processing-unit";
 i["amount"] = 5;
 ings.push(i);
 doc["ingredients"] = ings;
+doc["result"] = "productivity-module-2";
 db.recipe.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/steel-axe.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Steel-axe.png";
+doc["energy_required"] = 0.5;
+doc["result_count"] = 1;
+doc["type"] = "recipe";
+doc["energy_required"] = 8;
+doc["name"] = "railgun-dart";
+doc["enabled"] = false;
+ings = [];
+i = {};
+i["name"] = "steel-plate";
+i["amount"] = 5;
+ings.push(i);
+i = {};
+i["name"] = "electronic-circuit";
+i["amount"] = 5;
+ings.push(i);
+doc["ingredients"] = ings;
+doc["result"] = "railgun-dart";
+db.recipe.insert(doc);
+
+doc = {};
+doc["type"] = "mining-tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
 doc["speed"] = 4;
 action = [];
-action.push("table: 00000000006b8580")
 action.push("direct")
+action.push("table: 00000000006ba0b0")
 doc["action"] = action;
-doc["order"] = "a[mining]-b[steel-axe]";
 doc["durability"] = 5000;
 doc["stack_size"] = 20;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "mining-tool";
 doc["name"] = "steel-axe";
+doc["icon"] = "__base__/graphics/icons/steel-axe.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Steel-axe.png";
+doc["order"] = "a[mining]-b[steel-axe]";
 doc["subgroup"] = "tool";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-axe.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-axe.png";
+doc["type"] = "mining-tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
 doc["speed"] = 2.5;
 action = [];
-action.push("table: 00000000006979a0")
 action.push("direct")
+action.push("table: 0000000000697c50")
 doc["action"] = action;
-doc["order"] = "a[mining]-a[iron-axe]";
 doc["durability"] = 4000;
 doc["stack_size"] = 20;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "mining-tool";
 doc["name"] = "iron-axe";
+doc["icon"] = "__base__/graphics/icons/iron-axe.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-axe.png";
+doc["order"] = "a[mining]-a[iron-axe]";
 doc["subgroup"] = "tool";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/shotgun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Shotgun.png";
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+flags.push("hidden")
+doc["flags"] = flags;
 doc["stack_size"] = 5;
 attack_parameters = [];
-attack_parameters.push("table: 0000000000699060")
-attack_parameters.push(60)
-attack_parameters.push(0.6)
-attack_parameters.push(20)
 attack_parameters.push("projectile")
-attack_parameters.push("shotgun-shell")
-attack_parameters.push(1.125)
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "b[shotgun]-a[basic]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "shotgun";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/flame-thrower.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Flame-thrower.png";
-doc["stack_size"] = 5;
-attack_parameters = [];
-attack_parameters.push("table: 0000000000697e20")
-attack_parameters.push(1)
-attack_parameters.push(0.6)
-attack_parameters.push("table: 0000000000698020")
-attack_parameters.push(1)
-attack_parameters.push(15)
-attack_parameters.push(0.6)
-attack_parameters.push("stream")
-attack_parameters.push("flame-thrower")
-attack_parameters.push(0.8)
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "e[flame-thrower]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "flame-thrower";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/combat-shotgun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Combat-shotgun.png";
-doc["stack_size"] = 5;
-attack_parameters = [];
+attack_parameters.push("table: 0000000000699910")
 attack_parameters.push(20)
-attack_parameters.push("table: 0000000000699a60")
+attack_parameters.push(180)
+attack_parameters.push(0.6)
+attack_parameters.push(0.6)
+attack_parameters.push("railgun")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "railgun";
+doc["icon"] = "__base__/graphics/icons/railgun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Railgun.png";
+doc["order"] = "c[railgun]";
+doc["subgroup"] = "gun";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000699690")
+attack_parameters.push(20)
+attack_parameters.push(1.2)
 attack_parameters.push(30)
 attack_parameters.push(0.5)
 attack_parameters.push(1.125)
-attack_parameters.push("projectile")
 attack_parameters.push("shotgun-shell")
-attack_parameters.push(1.2)
 doc["attack_parameters"] = attack_parameters;
-doc["order"] = "b[shotgun]-a[combat]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
 doc["name"] = "combat-shotgun";
+doc["icon"] = "__base__/graphics/icons/combat-shotgun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Combat-shotgun.png";
+doc["order"] = "b[shotgun]-a[combat]";
 doc["subgroup"] = "gun";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/tank-cannon.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Tank-cannon.png";
-doc["stack_size"] = 5;
-attack_parameters = [];
-attack_parameters.push(25)
-attack_parameters.push("table: 0000000000698d20")
-attack_parameters.push(90)
-attack_parameters.push(0)
-attack_parameters.push("table: 0000000000699120")
-attack_parameters.push("projectile")
-attack_parameters.push("cannon-shell")
-attack_parameters.push(1.6)
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "z[tank]-a[cannon]";
+doc["type"] = "gun";
 flags = [];
 flags.push("goes-to-main-inventory")
-flags.push("hidden")
 doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "tank-cannon";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
-doc["stack_size"] = 1;
+doc["stack_size"] = 5;
 attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000680770")
 attack_parameters.push(15)
-attack_parameters.push("table: 0000000000682180")
-attack_parameters.push(4)
-attack_parameters.push(0.7)
-attack_parameters.push(1.125)
-attack_parameters.push("projectile")
-attack_parameters.push("bullet")
-attack_parameters.push("table: 0000000000681cc0")
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "a[basic-clips]-b[submachine-gun]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "submachine-gun";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/railgun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Railgun.png";
-doc["stack_size"] = 5;
-attack_parameters = [];
-attack_parameters.push("table: 00000000006997e0")
-attack_parameters.push(180)
-attack_parameters.push(0.6)
-attack_parameters.push(20)
-attack_parameters.push("projectile")
-attack_parameters.push("railgun")
-attack_parameters.push(0.6)
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "c[railgun]";
-flags = [];
-flags.push("goes-to-main-inventory")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "railgun";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
-doc["stack_size"] = 1;
-attack_parameters = [];
-attack_parameters.push("table: 0000000000699220")
-attack_parameters.push(4)
-attack_parameters.push(0.7)
-attack_parameters.push("table: 00000000006993e0")
-attack_parameters.push("table: 0000000000698f20")
-attack_parameters.push(20)
-attack_parameters.push("projectile")
-attack_parameters.push("bullet")
-attack_parameters.push(1)
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "a[basic-clips]-b[tank-machine-gun]";
-flags = [];
-flags.push("goes-to-main-inventory")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "tank-machine-gun";
-doc["subgroup"] = "gun";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/pistol.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Pistol.png";
-doc["stack_size"] = 5;
-attack_parameters = [];
-attack_parameters.push(15)
-attack_parameters.push("table: 0000000000681c40")
+attack_parameters.push("table: 000000000067fe70")
 attack_parameters.push(10)
 attack_parameters.push(0.7)
 attack_parameters.push(1.125)
-attack_parameters.push("projectile")
 attack_parameters.push("bullet")
-attack_parameters.push("table: 00000000006822c0")
 doc["attack_parameters"] = attack_parameters;
-doc["order"] = "a[basic-clips]-a[pistol]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
 doc["name"] = "pistol";
+doc["icon"] = "__base__/graphics/icons/pistol.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Pistol.png";
+doc["order"] = "a[basic-clips]-a[pistol]";
 doc["subgroup"] = "gun";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-launcher.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-launcher.png";
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
 doc["stack_size"] = 5;
 attack_parameters = [];
-attack_parameters.push("table: 0000000000698fa0")
-attack_parameters.push("table: 0000000000699160")
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000699290")
+attack_parameters.push("table: 0000000000699a90")
+attack_parameters.push(22)
 attack_parameters.push(60)
 attack_parameters.push(0.8)
-attack_parameters.push(22)
-attack_parameters.push("projectile")
-attack_parameters.push("rocket")
 attack_parameters.push(0.6)
+attack_parameters.push("rocket")
 doc["attack_parameters"] = attack_parameters;
-doc["order"] = "d[rocket-launcher]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "gun";
 doc["name"] = "rocket-launcher";
+doc["icon"] = "__base__/graphics/icons/rocket-launcher.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-launcher.png";
+doc["order"] = "d[rocket-launcher]";
 doc["subgroup"] = "gun";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
-doc["stack_size"] = 1;
-attack_parameters = [];
-attack_parameters.push(20)
-attack_parameters.push("table: 0000000000698220")
-attack_parameters.push(4)
-attack_parameters.push(0.7)
-attack_parameters.push(0.65)
-attack_parameters.push("projectile")
-attack_parameters.push("bullet")
-attack_parameters.push("table: 00000000006981a0")
-doc["attack_parameters"] = attack_parameters;
-doc["order"] = "a[basic-clips]-b[vehicle-machine-gun]";
+doc["type"] = "gun";
 flags = [];
 flags.push("goes-to-main-inventory")
 flags.push("hidden")
 doc["flags"] = flags;
-doc["type"] = "gun";
-doc["name"] = "vehicle-machine-gun";
+doc["stack_size"] = 5;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000699310")
+attack_parameters.push(25)
+attack_parameters.push("table: 0000000000698f90")
+attack_parameters.push(90)
+attack_parameters.push(0)
+attack_parameters.push(1.6)
+attack_parameters.push("cannon-shell")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "tank-cannon";
+doc["icon"] = "__base__/graphics/icons/tank-cannon.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Tank-cannon.png";
+doc["order"] = "z[tank]-a[cannon]";
 doc["subgroup"] = "gun";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/science-pack-2.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Science-pack-2.png";
-doc["order"] = "a[science-pack-2]";
-doc["durability_description_key"] = "description.science-pack-remaining-amount";
-doc["subgroup"] = "science-pack";
-doc["durability"] = 1;
+doc["type"] = "gun";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "tool";
-doc["name"] = "science-pack-2";
-doc["stack_size"] = 200;
+doc["stack_size"] = 1;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 000000000067ffb0")
+attack_parameters.push(15)
+attack_parameters.push("table: 00000000006808b0")
+attack_parameters.push(4)
+attack_parameters.push(0.7)
+attack_parameters.push(1.125)
+attack_parameters.push("bullet")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "submachine-gun";
+doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
+doc["order"] = "a[basic-clips]-b[submachine-gun]";
+doc["subgroup"] = "gun";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push(4)
+attack_parameters.push(0.7)
+attack_parameters.push("bullet")
+attack_parameters.push("table: 0000000000699250")
+attack_parameters.push(20)
+attack_parameters.push("table: 00000000006997d0")
+attack_parameters.push(1)
+attack_parameters.push("table: 0000000000699650")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "tank-machine-gun";
+doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
+doc["order"] = "a[basic-clips]-b[tank-machine-gun]";
+doc["subgroup"] = "gun";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000698a50")
+attack_parameters.push(20)
+attack_parameters.push("table: 0000000000698390")
+attack_parameters.push(4)
+attack_parameters.push(0.7)
+attack_parameters.push(0.65)
+attack_parameters.push("bullet")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "vehicle-machine-gun";
+doc["icon"] = "__base__/graphics/icons/submachine-gun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Submachine-gun.png";
+doc["order"] = "a[basic-clips]-b[vehicle-machine-gun]";
+doc["subgroup"] = "gun";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+attack_parameters = [];
+attack_parameters.push("stream")
+attack_parameters.push(1)
+attack_parameters.push(1)
+attack_parameters.push(0.6)
+attack_parameters.push(0.8)
+attack_parameters.push("flame-thrower")
+attack_parameters.push("table: 00000000006984d0")
+attack_parameters.push(15)
+attack_parameters.push(0.6)
+attack_parameters.push("table: 0000000000698490")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "flame-thrower";
+doc["icon"] = "__base__/graphics/icons/flame-thrower.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Flame-thrower.png";
+doc["order"] = "e[flame-thrower]";
+doc["subgroup"] = "gun";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "gun";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+attack_parameters = [];
+attack_parameters.push("projectile")
+attack_parameters.push("table: 0000000000699990")
+attack_parameters.push(20)
+attack_parameters.push(60)
+attack_parameters.push(0.6)
+attack_parameters.push(1.125)
+attack_parameters.push("shotgun-shell")
+doc["attack_parameters"] = attack_parameters;
+doc["name"] = "shotgun";
+doc["icon"] = "__base__/graphics/icons/shotgun.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Shotgun.png";
+doc["order"] = "b[shotgun]-a[basic]";
+doc["subgroup"] = "gun";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["durability_description_key"] = "description.science-pack-remaining-amount";
+doc["durability"] = 1;
+doc["stack_size"] = 200;
+doc["name"] = "alien-science-pack";
 doc["icon"] = "__base__/graphics/icons/alien-science-pack.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Alien-science-pack.png";
 doc["order"] = "d[alien-science-pack]";
-doc["durability_description_key"] = "description.science-pack-remaining-amount";
 doc["subgroup"] = "science-pack";
-doc["durability"] = 1;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "tool";
-doc["name"] = "alien-science-pack";
-doc["stack_size"] = 200;
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["durability_description_key"] = "description.science-pack-remaining-amount";
+doc["durability"] = 1;
+doc["stack_size"] = 200;
+doc["name"] = "science-pack-2";
+doc["icon"] = "__base__/graphics/icons/science-pack-2.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Science-pack-2.png";
+doc["order"] = "a[science-pack-2]";
+doc["subgroup"] = "science-pack";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["durability_description_key"] = "description.science-pack-remaining-amount";
+doc["durability"] = 1;
+doc["stack_size"] = 200;
+doc["name"] = "science-pack-1";
 doc["icon"] = "__base__/graphics/icons/science-pack-1.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Science-pack-1.png";
 doc["order"] = "a[science-pack-1]";
-doc["durability_description_key"] = "description.science-pack-remaining-amount";
 doc["subgroup"] = "science-pack";
-doc["durability"] = 1;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "tool";
-doc["name"] = "science-pack-1";
-doc["stack_size"] = 200;
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "tool";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["durability_description_key"] = "description.science-pack-remaining-amount";
+doc["durability"] = 1;
+doc["stack_size"] = 200;
+doc["name"] = "science-pack-3";
 doc["icon"] = "__base__/graphics/icons/science-pack-3.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Science-pack-3.png";
 doc["order"] = "a[science-pack-3]";
-doc["durability_description_key"] = "description.science-pack-remaining-amount";
 doc["subgroup"] = "science-pack";
-doc["durability"] = 1;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "tool";
-doc["name"] = "science-pack-3";
-doc["stack_size"] = 200;
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "cluster-grenade";
 doc["icon"] = "__base__/graphics/icons/cluster-grenade.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Cluster-grenade.png";
-doc["stack_size"] = 100;
 doc["order"] = "a[grenade]-b[cluster]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "cluster-grenade";
 capsule_action = [];
-capsule_action.push("table: 0000000000680f00")
 capsule_action.push("throw")
+capsule_action.push("table: 00000000006837b0")
 doc["capsule_action"] = capsule_action;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/defender-capsule.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Defender-capsule.png";
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 doc["stack_size"] = 100;
-doc["order"] = "d[defender-capsule]";
 doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "defender-capsule";
-capsule_action = [];
-capsule_action.push("table: 0000000000680f40")
-capsule_action.push("throw")
-doc["capsule_action"] = capsule_action;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/grenade.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Grenade.png";
-doc["stack_size"] = 100;
-doc["order"] = "a[grenade]-a[normal]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "grenade";
-capsule_action = [];
-capsule_action.push("table: 00000000006813c0")
-capsule_action.push("throw")
-doc["capsule_action"] = capsule_action;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/equipment/discharge-defense-equipment-ability.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Discharge-defense-equipment-ability.png";
-doc["stack_size"] = 1;
-doc["order"] = "z";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "discharge-defense-remote";
-capsule_action = [];
-capsule_action.push("discharge-defense-equipment")
-capsule_action.push("equipment-remote")
-doc["capsule_action"] = capsule_action;
-db.item.insert(doc);
-
-doc = {};
+doc["name"] = "poison-capsule";
 doc["icon"] = "__base__/graphics/icons/poison-capsule.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Poison-capsule.png";
-doc["stack_size"] = 100;
 doc["order"] = "b[poison-capsule]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "poison-capsule";
 capsule_action = [];
-capsule_action.push("table: 00000000006812c0")
 capsule_action.push("throw")
+capsule_action.push("table: 00000000006835b0")
 doc["capsule_action"] = capsule_action;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/slowdown-capsule.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Slowdown-capsule.png";
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 doc["stack_size"] = 100;
-doc["order"] = "c[slowdown-capsule]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "slowdown-capsule";
-capsule_action = [];
-capsule_action.push("table: 0000000000681300")
-capsule_action.push("throw")
-doc["capsule_action"] = capsule_action;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/destroyer-capsule.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Destroyer-capsule.png";
-doc["stack_size"] = 100;
-doc["order"] = "f[destroyer-capsule]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "destroyer-capsule";
-capsule_action = [];
-capsule_action.push("table: 0000000000680800")
-capsule_action.push("throw")
-doc["capsule_action"] = capsule_action;
-db.item.insert(doc);
-
-doc = {};
+doc["subgroup"] = "raw-resource";
+doc["name"] = "raw-fish";
 doc["icon"] = "__base__/graphics/icons/fish.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Fish.png";
-doc["stack_size"] = 100;
 doc["order"] = "f-e-a";
 capsule_action = [];
-capsule_action.push("table: 0000000000684380")
 capsule_action.push("use-on-self")
+capsule_action.push("table: 00000000006822b0")
 doc["capsule_action"] = capsule_action;
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "raw-fish";
-doc["subgroup"] = "raw-resource";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+doc["subgroup"] = "capsule";
+doc["name"] = "discharge-defense-remote";
+doc["icon"] = "__base__/graphics/equipment/discharge-defense-equipment-ability.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Discharge-defense-equipment-ability.png";
+doc["order"] = "z";
+capsule_action = [];
+capsule_action.push("equipment-remote")
+capsule_action.push("discharge-defense-equipment")
+doc["capsule_action"] = capsule_action;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "slowdown-capsule";
+doc["icon"] = "__base__/graphics/icons/slowdown-capsule.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Slowdown-capsule.png";
+doc["order"] = "c[slowdown-capsule]";
+capsule_action = [];
+capsule_action.push("throw")
+capsule_action.push("table: 0000000000683670")
+doc["capsule_action"] = capsule_action;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "grenade";
+doc["icon"] = "__base__/graphics/icons/grenade.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Grenade.png";
+doc["order"] = "a[grenade]-a[normal]";
+capsule_action = [];
+capsule_action.push("throw")
+capsule_action.push("table: 0000000000683070")
+doc["capsule_action"] = capsule_action;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "destroyer-capsule";
+doc["icon"] = "__base__/graphics/icons/destroyer-capsule.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Destroyer-capsule.png";
+doc["order"] = "f[destroyer-capsule]";
+capsule_action = [];
+capsule_action.push("throw")
+capsule_action.push("table: 0000000000683370")
+doc["capsule_action"] = capsule_action;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "defender-capsule";
+doc["icon"] = "__base__/graphics/icons/defender-capsule.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Defender-capsule.png";
+doc["order"] = "d[defender-capsule]";
+capsule_action = [];
+capsule_action.push("throw")
+capsule_action.push("table: 0000000000682eb0")
+doc["capsule_action"] = capsule_action;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "capsule";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "capsule";
+doc["name"] = "distractor-capsule";
 doc["icon"] = "__base__/graphics/icons/distractor-capsule.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Distractor-capsule.png";
-doc["stack_size"] = 100;
 doc["order"] = "e[defender-capsule]";
-doc["subgroup"] = "capsule";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "capsule";
-doc["name"] = "distractor-capsule";
 capsule_action = [];
-capsule_action.push("table: 0000000000681340")
 capsule_action.push("throw")
+capsule_action.push("table: 0000000000682ff0")
 doc["capsule_action"] = capsule_action;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/blueprint.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Blueprint.png";
+doc["type"] = "blueprint";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 doc["alt_selection_cursor_box_type"] = "copy";
-doc["stack_size"] = 1;
-doc["draw_label_for_cursor_render"] = true;
 selection_color = [];
 selection_color.push(0)
 selection_color.push(1)
 selection_color.push(0)
 doc["selection_color"] = selection_color;
-doc["order"] = "c[automated-construction]-a[blueprint]";
+doc["subgroup"] = "tool";
+doc["draw_label_for_cursor_render"] = true;
+alt_selection_mode = [];
+alt_selection_mode.push("blueprint")
+doc["alt_selection_mode"] = alt_selection_mode;
+selection_mode = [];
+selection_mode.push("blueprint")
+doc["selection_mode"] = selection_mode;
+doc["selection_cursor_box_type"] = "copy";
 doc["item_to_clear"] = "electronic-circuit";
 alt_selection_color = [];
 alt_selection_color.push(0)
 alt_selection_color.push(1)
 alt_selection_color.push(0)
 doc["alt_selection_color"] = alt_selection_color;
-doc["subgroup"] = "tool";
-selection_mode = [];
-selection_mode.push("blueprint")
-doc["selection_mode"] = selection_mode;
-alt_selection_mode = [];
-alt_selection_mode.push("blueprint")
-doc["alt_selection_mode"] = alt_selection_mode;
-doc["selection_cursor_box_type"] = "copy";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "blueprint";
+doc["stack_size"] = 1;
 doc["name"] = "blueprint";
+doc["icon"] = "__base__/graphics/icons/blueprint.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Blueprint.png";
+doc["order"] = "c[automated-construction]-a[blueprint]";
 doc["stackable"] = false;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/repair-pack.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Repair-pack.png";
-doc["speed"] = 1;
-doc["order"] = "b[repair]-a[repair-pack]";
-doc["subgroup"] = "tool";
-doc["stack_size"] = 100;
+doc["type"] = "repair-tool";
 flags = [];
 flags.push("goes-to-quickbar")
 doc["flags"] = flags;
-doc["type"] = "repair-tool";
-doc["name"] = "repair-pack";
+doc["speed"] = 1;
 doc["durability"] = 200;
+doc["stack_size"] = 100;
+doc["name"] = "repair-pack";
+doc["icon"] = "__base__/graphics/icons/repair-pack.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Repair-pack.png";
+doc["order"] = "b[repair]-a[repair-pack]";
+doc["subgroup"] = "tool";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/railgun-ammo.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Railgun-ammo.png";
-doc["order"] = "c[railgun]";
-doc["subgroup"] = "ammo";
+doc["type"] = "ammo";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
 doc["stack_size"] = 100;
-doc["magazine_size"] = 4;
+doc["subgroup"] = "ammo";
+doc["name"] = "rocket";
+doc["icon"] = "__base__/graphics/icons/rocket.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket.png";
+doc["order"] = "d[rocket-launcher]-a[basic]";
+ammo_type = [];
+ammo_type.push("table: 0000000000678f80")
+ammo_type.push("rocket")
+doc["ammo_type"] = ammo_type;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "ammo";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+ammo_type = [];
+ammo_type.push("table: 0000000000679200")
+ammo_type.push("bullet")
+doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 100;
+doc["order"] = "a[basic-clips]-b[piercing-rounds-magazine]";
+doc["name"] = "piercing-rounds-magazine";
+doc["icon"] = "__base__/graphics/icons/piercing-rounds-magazine.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Piercing-rounds-magazine.png";
+doc["magazine_size"] = 10;
+doc["subgroup"] = "ammo";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "ammo";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "ammo";
+doc["name"] = "explosive-rocket";
+doc["icon"] = "__base__/graphics/icons/explosive-rocket.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Explosive-rocket.png";
+doc["order"] = "d[rocket-launcher]-b[explosive]";
+ammo_type = [];
+ammo_type.push("table: 00000000006764c0")
+ammo_type.push("rocket")
+doc["ammo_type"] = ammo_type;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "ammo";
 flags = [];
 flags.push("goes-to-main-inventory")
 flags.push("hidden")
 doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "railgun-dart";
 ammo_type = [];
-ammo_type.push("table: 0000000000677510")
+ammo_type.push("direction")
+ammo_type.push("table: 00000000006766c0")
 ammo_type.push("railgun")
-ammo_type.push("direction")
 doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 100;
+doc["order"] = "c[railgun]";
+doc["name"] = "railgun-dart";
+doc["icon"] = "__base__/graphics/icons/railgun-ammo.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Railgun-ammo.png";
+doc["magazine_size"] = 4;
+doc["subgroup"] = "ammo";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/cannon-shell.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Cannon-shell.png";
-doc["stack_size"] = 100;
-doc["order"] = "d[cannon-shell]-a[basic]";
-doc["subgroup"] = "ammo";
+doc["type"] = "ammo";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "cannon-shell";
-ammo_type = [];
-ammo_type.push("table: 0000000000677e10")
-ammo_type.push("cannon-shell")
-ammo_type.push("direction")
-doc["ammo_type"] = ammo_type;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/shotgun-shell.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Shotgun-shell.png";
-doc["order"] = "b[shotgun]-a[basic]";
-doc["subgroup"] = "ammo";
 doc["stack_size"] = 100;
-doc["magazine_size"] = 10;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "shotgun-shell";
-ammo_type = [];
-ammo_type.push("table: 0000000000676a50")
-ammo_type.push("shotgun-shell")
-ammo_type.push("direction")
-doc["ammo_type"] = ammo_type;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/firearm-magazine.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Firearm-magazine.png";
-doc["order"] = "a[basic-clips]-a[firearm-magazine]";
 doc["subgroup"] = "ammo";
-doc["stack_size"] = 100;
-doc["magazine_size"] = 10;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "firearm-magazine";
-ammo_type = [];
-ammo_type.push("bullet")
-ammo_type.push("table: 0000000000682400")
-doc["ammo_type"] = ammo_type;
-db.item.insert(doc);
-
-doc = {};
+doc["name"] = "explosive-cannon-shell";
 doc["icon"] = "__base__/graphics/icons/explosive-cannon-shell.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Explosive-cannon-shell.png";
-doc["stack_size"] = 100;
 doc["order"] = "d[cannon-shell]-b[explosive]";
-doc["subgroup"] = "ammo";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "explosive-cannon-shell";
 ammo_type = [];
-ammo_type.push("table: 0000000000677a90")
-ammo_type.push("cannon-shell")
 ammo_type.push("direction")
+ammo_type.push("table: 0000000000676100")
+ammo_type.push("cannon-shell")
 doc["ammo_type"] = ammo_type;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/explosive-rocket.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Explosive-rocket.png";
-doc["stack_size"] = 100;
-doc["order"] = "d[rocket-launcher]-b[explosive]";
-doc["subgroup"] = "ammo";
+doc["type"] = "ammo";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "explosive-rocket";
 ammo_type = [];
-ammo_type.push("rocket")
-ammo_type.push("table: 00000000006774d0")
-doc["ammo_type"] = ammo_type;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket.png";
-doc["stack_size"] = 100;
-doc["order"] = "d[rocket-launcher]-a[basic]";
-doc["subgroup"] = "ammo";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "rocket";
-ammo_type = [];
-ammo_type.push("rocket")
-ammo_type.push("table: 00000000006767d0")
-doc["ammo_type"] = ammo_type;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/flame-thrower-ammo.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Flame-thrower-ammo.png";
-doc["order"] = "e[flame-thrower]";
-doc["subgroup"] = "ammo";
-doc["stack_size"] = 50;
-doc["magazine_size"] = 100;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "flame-thrower-ammo";
-ammo_type = [];
-ammo_type.push("table: 0000000000676ed0")
+ammo_type.push("position")
+ammo_type.push("table: 0000000000679380")
 ammo_type.push(true)
 ammo_type.push("flame-thrower")
-ammo_type.push("position")
 doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 50;
+doc["order"] = "e[flame-thrower]";
+doc["name"] = "flame-thrower-ammo";
+doc["icon"] = "__base__/graphics/icons/flame-thrower-ammo.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Flame-thrower-ammo.png";
+doc["magazine_size"] = 100;
+doc["subgroup"] = "ammo";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "ammo";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+ammo_type = [];
+ammo_type.push("table: 00000000006802b0")
+ammo_type.push("bullet")
+doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 100;
+doc["order"] = "a[basic-clips]-a[firearm-magazine]";
+doc["name"] = "firearm-magazine";
+doc["icon"] = "__base__/graphics/icons/firearm-magazine.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Firearm-magazine.png";
+doc["magazine_size"] = 10;
+doc["subgroup"] = "ammo";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "ammo";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+ammo_type = [];
+ammo_type.push("direction")
+ammo_type.push("table: 00000000006762c0")
+ammo_type.push("shotgun-shell")
+doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 100;
+doc["order"] = "b[shotgun]-b[piercing]";
+doc["name"] = "piercing-shotgun-shell";
 doc["icon"] = "__base__/graphics/icons/piercing-shotgun-shell.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Piercing-shotgun-shell.png";
-doc["order"] = "b[shotgun]-b[piercing]";
-doc["subgroup"] = "ammo";
-doc["stack_size"] = 100;
 doc["magazine_size"] = 10;
+doc["subgroup"] = "ammo";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "ammo";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "ammo";
-doc["name"] = "piercing-shotgun-shell";
+doc["stack_size"] = 100;
+doc["subgroup"] = "ammo";
+doc["name"] = "cannon-shell";
+doc["icon"] = "__base__/graphics/icons/cannon-shell.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Cannon-shell.png";
+doc["order"] = "d[cannon-shell]-a[basic]";
 ammo_type = [];
-ammo_type.push("table: 0000000000677010")
-ammo_type.push("shotgun-shell")
 ammo_type.push("direction")
+ammo_type.push("table: 0000000000675d80")
+ammo_type.push("cannon-shell")
 doc["ammo_type"] = ammo_type;
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/piercing-rounds-magazine.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Piercing-rounds-magazine.png";
-doc["order"] = "a[basic-clips]-b[piercing-rounds-magazine]";
-doc["subgroup"] = "ammo";
-doc["stack_size"] = 100;
-doc["magazine_size"] = 10;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
 doc["type"] = "ammo";
-doc["name"] = "piercing-rounds-magazine";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
 ammo_type = [];
-ammo_type.push("bullet")
-ammo_type.push("table: 0000000000677290")
+ammo_type.push("direction")
+ammo_type.push("table: 0000000000676000")
+ammo_type.push("shotgun-shell")
 doc["ammo_type"] = ammo_type;
+doc["stack_size"] = 100;
+doc["order"] = "b[shotgun]-a[basic]";
+doc["name"] = "shotgun-shell";
+doc["icon"] = "__base__/graphics/icons/shotgun-shell.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Shotgun-shell.png";
+doc["magazine_size"] = 10;
+doc["subgroup"] = "ammo";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/effectivity-module.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module.png";
-doc["tier"] = 1;
-doc["order"] = "c[effectivity]-a[effectivity-module-1]";
-doc["category"] = "effectivity";
-doc["subgroup"] = "module";
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9100")
-doc["effect"] = effect;
+doc["type"] = "module";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "effectivity-module";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/productivity-module-3.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module-3.png";
 doc["tier"] = 3;
-doc["order"] = "c[productivity]-c[productivity-module-3]";
-doc["category"] = "productivity";
-doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
-doc["subgroup"] = "module";
-limitation = [];
-limitation.push("sulfuric-acid")
-limitation.push("basic-oil-processing")
-limitation.push("advanced-oil-processing")
-limitation.push("heavy-oil-cracking")
-limitation.push("light-oil-cracking")
-limitation.push("solid-fuel-from-light-oil")
-limitation.push("solid-fuel-from-heavy-oil")
-limitation.push("solid-fuel-from-petroleum-gas")
-limitation.push("lubricant")
-limitation.push("iron-plate")
-limitation.push("copper-plate")
-limitation.push("steel-plate")
-limitation.push("stone-brick")
-limitation.push("sulfur")
-limitation.push("plastic-bar")
-limitation.push("empty-barrel")
-limitation.push("iron-stick")
-limitation.push("iron-gear-wheel")
-limitation.push("copper-cable")
-limitation.push("electronic-circuit")
-limitation.push("advanced-circuit")
-limitation.push("engine-unit")
-limitation.push("electric-engine-unit")
-limitation.push("processing-unit")
-limitation.push("explosives")
-limitation.push("battery")
-limitation.push("flying-robot-frame")
-limitation.push("science-pack-1")
-limitation.push("science-pack-2")
-limitation.push("science-pack-3")
-limitation.push("alien-science-pack")
-limitation.push("low-density-structure")
-limitation.push("rocket-fuel")
-limitation.push("rocket-control-unit")
-limitation.push("rocket-part")
-doc["limitation"] = limitation;
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9540")
-effect.push("table: 00000000006b9680")
-effect.push("table: 00000000006b9740")
-effect.push("table: 00000000006b9480")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "productivity-module-3";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/productivity-module-2.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module-2.png";
-doc["tier"] = 2;
-doc["order"] = "c[productivity]-b[productivity-module-2]";
-doc["category"] = "productivity";
-doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
-doc["subgroup"] = "module";
-limitation = [];
-limitation.push("sulfuric-acid")
-limitation.push("basic-oil-processing")
-limitation.push("advanced-oil-processing")
-limitation.push("heavy-oil-cracking")
-limitation.push("light-oil-cracking")
-limitation.push("solid-fuel-from-light-oil")
-limitation.push("solid-fuel-from-heavy-oil")
-limitation.push("solid-fuel-from-petroleum-gas")
-limitation.push("lubricant")
-limitation.push("iron-plate")
-limitation.push("copper-plate")
-limitation.push("steel-plate")
-limitation.push("stone-brick")
-limitation.push("sulfur")
-limitation.push("plastic-bar")
-limitation.push("empty-barrel")
-limitation.push("iron-stick")
-limitation.push("iron-gear-wheel")
-limitation.push("copper-cable")
-limitation.push("electronic-circuit")
-limitation.push("advanced-circuit")
-limitation.push("engine-unit")
-limitation.push("electric-engine-unit")
-limitation.push("processing-unit")
-limitation.push("explosives")
-limitation.push("battery")
-limitation.push("flying-robot-frame")
-limitation.push("science-pack-1")
-limitation.push("science-pack-2")
-limitation.push("science-pack-3")
-limitation.push("alien-science-pack")
-limitation.push("low-density-structure")
-limitation.push("rocket-fuel")
-limitation.push("rocket-control-unit")
-limitation.push("rocket-part")
-doc["limitation"] = limitation;
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9700")
-effect.push("table: 00000000006b9880")
-effect.push("table: 00000000006b9c80")
-effect.push("table: 00000000006b95c0")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "productivity-module-2";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/speed-module.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Speed-module.png";
-doc["tier"] = 1;
-doc["order"] = "a[speed]-a[speed-module-1]";
 doc["category"] = "speed";
-doc["subgroup"] = "module";
-doc["default_request_amount"] = 10;
 effect = [];
-effect.push("table: 00000000006b9ac0")
-effect.push("table: 00000000006b9080")
+effect.push("table: 00000000006b6730")
+effect.push("table: 00000000006b65f0")
 doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "speed-module";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/effectivity-module-2.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module-2.png";
-doc["tier"] = 2;
-doc["order"] = "c[effectivity]-b[effectivity-module-2]";
-doc["category"] = "effectivity";
-doc["subgroup"] = "module";
 doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9400")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "effectivity-module-2";
 doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/effectivity-module-3.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module-3.png";
-doc["tier"] = 3;
-doc["order"] = "c[effectivity]-c[effectivity-module-3]";
-doc["category"] = "effectivity";
-doc["subgroup"] = "module";
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b94c0")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "effectivity-module-3";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/productivity-module.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module.png";
-doc["tier"] = 1;
-doc["order"] = "c[productivity]-a[productivity-module-1]";
-doc["category"] = "productivity";
-doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
-doc["subgroup"] = "module";
-limitation = [];
-limitation.push("sulfuric-acid")
-limitation.push("basic-oil-processing")
-limitation.push("advanced-oil-processing")
-limitation.push("heavy-oil-cracking")
-limitation.push("light-oil-cracking")
-limitation.push("solid-fuel-from-light-oil")
-limitation.push("solid-fuel-from-heavy-oil")
-limitation.push("solid-fuel-from-petroleum-gas")
-limitation.push("lubricant")
-limitation.push("iron-plate")
-limitation.push("copper-plate")
-limitation.push("steel-plate")
-limitation.push("stone-brick")
-limitation.push("sulfur")
-limitation.push("plastic-bar")
-limitation.push("empty-barrel")
-limitation.push("iron-stick")
-limitation.push("iron-gear-wheel")
-limitation.push("copper-cable")
-limitation.push("electronic-circuit")
-limitation.push("advanced-circuit")
-limitation.push("engine-unit")
-limitation.push("electric-engine-unit")
-limitation.push("processing-unit")
-limitation.push("explosives")
-limitation.push("battery")
-limitation.push("flying-robot-frame")
-limitation.push("science-pack-1")
-limitation.push("science-pack-2")
-limitation.push("science-pack-3")
-limitation.push("alien-science-pack")
-limitation.push("low-density-structure")
-limitation.push("rocket-fuel")
-limitation.push("rocket-control-unit")
-limitation.push("rocket-part")
-doc["limitation"] = limitation;
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9200")
-effect.push("table: 00000000006b9140")
-effect.push("table: 00000000006b9580")
-effect.push("table: 00000000006b91c0")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "productivity-module";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/speed-module-2.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Speed-module-2.png";
-doc["tier"] = 2;
-doc["order"] = "a[speed]-b[speed-module-2]";
-doc["category"] = "speed";
-doc["subgroup"] = "module";
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9bc0")
-effect.push("table: 00000000006b9500")
-doc["effect"] = effect;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "speed-module-2";
-doc["stack_size"] = 50;
-db.item.insert(doc);
-
-doc = {};
+doc["name"] = "speed-module-3";
 doc["icon"] = "__base__/graphics/icons/speed-module-3.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Speed-module-3.png";
-doc["tier"] = 3;
 doc["order"] = "a[speed]-c[speed-module-3]";
-doc["category"] = "speed";
 doc["subgroup"] = "module";
-doc["default_request_amount"] = 10;
-effect = [];
-effect.push("table: 00000000006b9d80")
-effect.push("table: 00000000006b9b00")
-doc["effect"] = effect;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "module";
-doc["name"] = "speed-module-3";
+doc["tier"] = 1;
+doc["category"] = "effectivity";
+effect = [];
+effect.push("table: 00000000006b6af0")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
 doc["stack_size"] = 50;
+doc["name"] = "effectivity-module";
+doc["icon"] = "__base__/graphics/icons/effectivity-module.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module.png";
+doc["order"] = "c[effectivity]-a[effectivity-module-1]";
+doc["subgroup"] = "module";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/cargo-wagon.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Cargo-wagon.png";
-doc["stack_size"] = 5;
-doc["place_result"] = "cargo-wagon";
-doc["order"] = "a[train-system]-g[cargo-wagon]";
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 2;
+doc["category"] = "speed";
+effect = [];
+effect.push("table: 00000000006b6a70")
+effect.push("table: 00000000006b63f0")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "speed-module-2";
+doc["icon"] = "__base__/graphics/icons/speed-module-2.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Speed-module-2.png";
+doc["order"] = "a[speed]-b[speed-module-2]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 3;
+doc["category"] = "effectivity";
+effect = [];
+effect.push("table: 00000000006b6830")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "effectivity-module-3";
+doc["icon"] = "__base__/graphics/icons/effectivity-module-3.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module-3.png";
+doc["order"] = "c[effectivity]-c[effectivity-module-3]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 3;
+limitation = [];
+limitation.push("sulfuric-acid")
+limitation.push("basic-oil-processing")
+limitation.push("advanced-oil-processing")
+limitation.push("heavy-oil-cracking")
+limitation.push("light-oil-cracking")
+limitation.push("solid-fuel-from-light-oil")
+limitation.push("solid-fuel-from-heavy-oil")
+limitation.push("solid-fuel-from-petroleum-gas")
+limitation.push("lubricant")
+limitation.push("iron-plate")
+limitation.push("copper-plate")
+limitation.push("steel-plate")
+limitation.push("stone-brick")
+limitation.push("sulfur")
+limitation.push("plastic-bar")
+limitation.push("empty-barrel")
+limitation.push("iron-stick")
+limitation.push("iron-gear-wheel")
+limitation.push("copper-cable")
+limitation.push("electronic-circuit")
+limitation.push("advanced-circuit")
+limitation.push("engine-unit")
+limitation.push("electric-engine-unit")
+limitation.push("processing-unit")
+limitation.push("explosives")
+limitation.push("battery")
+limitation.push("flying-robot-frame")
+limitation.push("science-pack-1")
+limitation.push("science-pack-2")
+limitation.push("science-pack-3")
+limitation.push("alien-science-pack")
+limitation.push("low-density-structure")
+limitation.push("rocket-fuel")
+limitation.push("rocket-control-unit")
+limitation.push("rocket-part")
+doc["limitation"] = limitation;
+doc["category"] = "productivity";
+doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
+effect = [];
+effect.push("table: 00000000006b64f0")
+effect.push("table: 00000000006b6470")
+effect.push("table: 00000000006b6530")
+effect.push("table: 00000000006b70f0")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "productivity-module-3";
+doc["icon"] = "__base__/graphics/icons/productivity-module-3.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module-3.png";
+doc["order"] = "c[productivity]-c[productivity-module-3]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 1;
+limitation = [];
+limitation.push("sulfuric-acid")
+limitation.push("basic-oil-processing")
+limitation.push("advanced-oil-processing")
+limitation.push("heavy-oil-cracking")
+limitation.push("light-oil-cracking")
+limitation.push("solid-fuel-from-light-oil")
+limitation.push("solid-fuel-from-heavy-oil")
+limitation.push("solid-fuel-from-petroleum-gas")
+limitation.push("lubricant")
+limitation.push("iron-plate")
+limitation.push("copper-plate")
+limitation.push("steel-plate")
+limitation.push("stone-brick")
+limitation.push("sulfur")
+limitation.push("plastic-bar")
+limitation.push("empty-barrel")
+limitation.push("iron-stick")
+limitation.push("iron-gear-wheel")
+limitation.push("copper-cable")
+limitation.push("electronic-circuit")
+limitation.push("advanced-circuit")
+limitation.push("engine-unit")
+limitation.push("electric-engine-unit")
+limitation.push("processing-unit")
+limitation.push("explosives")
+limitation.push("battery")
+limitation.push("flying-robot-frame")
+limitation.push("science-pack-1")
+limitation.push("science-pack-2")
+limitation.push("science-pack-3")
+limitation.push("alien-science-pack")
+limitation.push("low-density-structure")
+limitation.push("rocket-fuel")
+limitation.push("rocket-control-unit")
+limitation.push("rocket-part")
+doc["limitation"] = limitation;
+doc["category"] = "productivity";
+doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
+effect = [];
+effect.push("table: 00000000006b68b0")
+effect.push("table: 00000000006b6db0")
+effect.push("table: 00000000006b6870")
+effect.push("table: 00000000006b6430")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "productivity-module";
+doc["icon"] = "__base__/graphics/icons/productivity-module.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module.png";
+doc["order"] = "c[productivity]-a[productivity-module-1]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 2;
+doc["category"] = "effectivity";
+effect = [];
+effect.push("table: 00000000006b6b70")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "effectivity-module-2";
+doc["icon"] = "__base__/graphics/icons/effectivity-module-2.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Effectivity-module-2.png";
+doc["order"] = "c[effectivity]-b[effectivity-module-2]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 2;
+limitation = [];
+limitation.push("sulfuric-acid")
+limitation.push("basic-oil-processing")
+limitation.push("advanced-oil-processing")
+limitation.push("heavy-oil-cracking")
+limitation.push("light-oil-cracking")
+limitation.push("solid-fuel-from-light-oil")
+limitation.push("solid-fuel-from-heavy-oil")
+limitation.push("solid-fuel-from-petroleum-gas")
+limitation.push("lubricant")
+limitation.push("iron-plate")
+limitation.push("copper-plate")
+limitation.push("steel-plate")
+limitation.push("stone-brick")
+limitation.push("sulfur")
+limitation.push("plastic-bar")
+limitation.push("empty-barrel")
+limitation.push("iron-stick")
+limitation.push("iron-gear-wheel")
+limitation.push("copper-cable")
+limitation.push("electronic-circuit")
+limitation.push("advanced-circuit")
+limitation.push("engine-unit")
+limitation.push("electric-engine-unit")
+limitation.push("processing-unit")
+limitation.push("explosives")
+limitation.push("battery")
+limitation.push("flying-robot-frame")
+limitation.push("science-pack-1")
+limitation.push("science-pack-2")
+limitation.push("science-pack-3")
+limitation.push("alien-science-pack")
+limitation.push("low-density-structure")
+limitation.push("rocket-fuel")
+limitation.push("rocket-control-unit")
+limitation.push("rocket-part")
+doc["limitation"] = limitation;
+doc["category"] = "productivity";
+doc["limitation_message_key"] = "production-module-usable-only-on-intermediates";
+effect = [];
+effect.push("table: 00000000006b7230")
+effect.push("table: 00000000006b6fb0")
+effect.push("table: 00000000006b6d30")
+effect.push("table: 00000000006b6f70")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "productivity-module-2";
+doc["icon"] = "__base__/graphics/icons/productivity-module-2.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Productivity-module-2.png";
+doc["order"] = "c[productivity]-b[productivity-module-2]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "module";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["tier"] = 1;
+doc["category"] = "speed";
+effect = [];
+effect.push("table: 00000000006b6c30")
+effect.push("table: 00000000006b6df0")
+doc["effect"] = effect;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 50;
+doc["name"] = "speed-module";
+doc["icon"] = "__base__/graphics/icons/speed-module.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Speed-module.png";
+doc["order"] = "a[speed]-a[speed-module-1]";
+doc["subgroup"] = "module";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item-with-entity-data";
 flags = [];
 flags.push("goes-to-quickbar")
 doc["flags"] = flags;
-doc["type"] = "item-with-entity-data";
-doc["name"] = "cargo-wagon";
+doc["stack_size"] = 1;
 doc["subgroup"] = "transport";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/diesel-locomotive.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Diesel-locomotive.png";
-doc["stack_size"] = 5;
-doc["place_result"] = "diesel-locomotive";
-doc["order"] = "a[train-system]-f[diesel-locomotive]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item-with-entity-data";
-doc["name"] = "diesel-locomotive";
-doc["subgroup"] = "transport";
-db.item.insert(doc);
-
-doc = {};
+doc["name"] = "car";
 doc["icon"] = "__base__/graphics/icons/car.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Car.png";
-doc["stack_size"] = 1;
-doc["place_result"] = "car";
 doc["order"] = "b[personal-transport]-a[car]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item-with-entity-data";
-doc["name"] = "car";
-doc["subgroup"] = "transport";
+doc["place_result"] = "car";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "item-with-entity-data";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+doc["subgroup"] = "transport";
+doc["name"] = "cargo-wagon";
+doc["icon"] = "__base__/graphics/icons/cargo-wagon.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Cargo-wagon.png";
+doc["order"] = "a[train-system]-g[cargo-wagon]";
+doc["place_result"] = "cargo-wagon";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item-with-entity-data";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+doc["subgroup"] = "transport";
+doc["name"] = "diesel-locomotive";
+doc["icon"] = "__base__/graphics/icons/diesel-locomotive.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Diesel-locomotive.png";
+doc["order"] = "a[train-system]-f[diesel-locomotive]";
+doc["place_result"] = "diesel-locomotive";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item-with-entity-data";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+doc["subgroup"] = "transport";
+doc["name"] = "tank";
 doc["icon"] = "__base__/graphics/icons/tank.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Tank.png";
-doc["stack_size"] = 1;
-doc["place_result"] = "tank";
 doc["order"] = "b[personal-transport]-b[tank]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item-with-entity-data";
-doc["name"] = "tank";
-doc["subgroup"] = "transport";
+doc["place_result"] = "tank";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "rail-planner";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["place_result"] = "straight-rail";
+doc["straight_rail"] = "straight-rail";
+doc["curved_rail"] = "curved-rail";
+doc["stack_size"] = 100;
+doc["name"] = "rail";
 doc["icon"] = "__base__/graphics/icons/rail.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Rail.png";
 doc["order"] = "a[train-system]-a[rail]";
 doc["subgroup"] = "transport";
-doc["curved_rail"] = "curved-rail";
-doc["straight_rail"] = "straight-rail";
-doc["stack_size"] = 100;
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "rail-planner";
-doc["name"] = "rail";
-doc["place_result"] = "straight-rail";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/filter-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Filter-inserter.png";
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 doc["stack_size"] = 50;
-doc["place_result"] = "filter-inserter";
-doc["order"] = "e[filter-inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "filter-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/underground-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Underground-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "underground-belt";
-doc["order"] = "b[underground-belt]-a[underground-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "underground-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/discharge-defense-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Discharge-defense-equipment.png";
-doc["stack_size"] = 20;
-doc["order"] = "d[active-defense]-b[discharge-defense-equipment]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "discharge-defense-equipment";
-doc["placed_as_equipment_result"] = "discharge-defense-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/green-wire.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Green-wire.png";
-doc["stack_size"] = 200;
-doc["order"] = "a[wires]-c[green-wire]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "green-wire";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/steam-engine.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Steam-engine.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "steam-engine";
-doc["order"] = "b[steam-power]-b[steam-engine]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "steam-engine";
 doc["subgroup"] = "energy";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/steel-furnace.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Steel-furnace.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "steel-furnace";
-doc["order"] = "b[steel-furnace]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "steel-furnace";
-doc["subgroup"] = "smelting-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fast-underground-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fast-underground-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "fast-underground-belt";
-doc["order"] = "b[underground-belt]-b[fast-underground-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "fast-underground-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/land-mine.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Land-mine.png";
-doc["order"] = "f[land-mine]";
-doc["trigger_radius"] = 1;
-doc["subgroup"] = "gun";
-doc["damage_radius"] = 5;
-doc["stack_size"] = 20;
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "land-mine";
-doc["place_result"] = "land-mine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/small-electric-pole.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Small-electric-pole.png";
-doc["order"] = "a[energy]-a[small-electric-pole]";
-doc["subgroup"] = "energy-pipe-distribution";
-doc["stack_size"] = 50;
-doc["place_result"] = "small-electric-pole";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "small-electric-pole";
-doc["fuel_value"] = "4MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/laser-turret.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Laser-turret.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "laser-turret";
-doc["order"] = "b[turret]-b[laser-turret]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "laser-turret";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fast-transport-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fast-transport-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "fast-transport-belt";
-doc["order"] = "a[transport-belt]-b[fast-transport-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "fast-transport-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/accumulator.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Accumulator.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "electric-energy-interface";
-doc["order"] = "e[electric-energy-interface]-b[electric-energy-interface]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "electric-energy-interface";
-doc["subgroup"] = "energy";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/logistic-chest-requester.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-requester.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "logistic-chest-requester";
-doc["order"] = "b[storage]-c[logistic-chest-requester]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "logistic-chest-requester";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/wooden-chest.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Wooden-chest.png";
-doc["order"] = "a[items]-a[wooden-chest]";
-doc["subgroup"] = "storage";
-doc["stack_size"] = 50;
-doc["place_result"] = "wooden-chest";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "wooden-chest";
-doc["fuel_value"] = "4MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/landfill.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Landfill.png";
-place_as_tile = [];
-place_as_tile.push("grass")
-place_as_tile.push("table: 00000000006b8b00")
-place_as_tile.push(1)
-doc["place_as_tile"] = place_as_tile;
-doc["stack_size"] = 100;
-doc["order"] = "c[landfill]-a[dirt]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "landfill";
-doc["subgroup"] = "terrain";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/construction-robot.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Construction-robot.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "construction-robot";
-doc["order"] = "a[robot]-b[construction-robot]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "construction-robot";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/roboport.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Roboport.png";
-doc["stack_size"] = 5;
-doc["place_result"] = "roboport";
-doc["order"] = "c[signal]-a[roboport]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "roboport";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stone.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stone.png";
-doc["stack_size"] = 50;
-doc["order"] = "d[stone]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stone";
-doc["subgroup"] = "raw-resource";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/hazard-concrete.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Hazard-concrete.png";
-place_as_tile = [];
-place_as_tile.push("hazard-concrete-left")
-place_as_tile.push("table: 00000000006b8800")
-place_as_tile.push(4)
-doc["place_as_tile"] = place_as_tile;
-doc["stack_size"] = 100;
-doc["order"] = "b[concrete]-b[hazard]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "hazard-concrete";
-doc["subgroup"] = "terrain";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/player-port.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Player-port.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "player-port";
-doc["order"] = "z[not-used]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidd  en")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "player-port";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/express-loader.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Express-loader.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "express-loader";
-doc["order"] = "d[loader]-c[express-loader]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "express-loader";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/offshore-pump.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Offshore-pump.png";
-doc["stack_size"] = 20;
-doc["place_result"] = "offshore-pump";
-doc["order"] = "b[fluids]-a[offshore-pump]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "offshore-pump";
-doc["subgroup"] = "extraction-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/concrete.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Concrete.png";
-place_as_tile = [];
-place_as_tile.push("concrete")
-place_as_tile.push("table: 00000000006b8b80")
-place_as_tile.push(4)
-doc["place_as_tile"] = place_as_tile;
-doc["stack_size"] = 100;
-doc["order"] = "b[concrete]-a[plain]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "concrete";
-doc["subgroup"] = "terrain";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/express-underground-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Express-underground-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "express-underground-belt";
-doc["order"] = "b[underground-belt]-c[express-underground-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "express-underground-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/assembling-machine-3.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-3.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "assembling-machine-3";
-doc["order"] = "c[assembling-machine-3]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "assembling-machine-3";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-plate.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-plate.png";
-doc["stack_size"] = 100;
-doc["order"] = "b[iron-plate]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "iron-plate";
-doc["subgroup"] = "raw-material";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/satellite.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Satellite.png";
-doc["stack_size"] = 1;
-doc["order"] = "p[satellite]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "satellite";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-part.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-part.png";
-doc["stack_size"] = 5;
-doc["order"] = "o[rocket-part]";
-flags = [];
-flags.push("goes-to-main-inventory")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "rocket-part";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-control-unit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-control-unit.png";
-doc["stack_size"] = 10;
-doc["order"] = "n[rocket-control-unit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "rocket-control-unit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/copper-ore.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Copper-ore.png";
-doc["stack_size"] = 50;
-doc["order"] = "f[copper-ore]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "copper-ore";
-doc["subgroup"] = "raw-resource";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/assembling-machine-2.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-2.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "assembling-machine-2";
-doc["order"] = "b[assembling-machine-2]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "assembling-machine-2";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/energy-shield-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Energy-shield-equipment.png";
-doc["order"] = "b[shield]-a[energy-shield-equipment]";
-doc["subgroup"] = "equipment";
-doc["default_request_amount"] = 10;
-doc["stack_size"] = 50;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "energy-shield-equipment";
-doc["placed_as_equipment_result"] = "energy-shield-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/medium-electric-pole.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Medium-electric-pole.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "medium-electric-pole";
-doc["order"] = "a[energy]-b[medium-electric-pole]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "medium-electric-pole";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/express-splitter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Express-splitter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "express-splitter";
-doc["order"] = "c[splitter]-c[express-splitter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "express-splitter";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/electric-engine-unit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Electric-engine-unit.png";
-doc["stack_size"] = 50;
-doc["order"] = "h[electric-engine-unit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "electric-engine-unit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/constant-combinator.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Constant-combinator.png";
-doc["stack_size"] = 50;
-doc["order"] = "b[combinators]-c[constant-combinator]";
-doc["place_result"] = "constant-combinator";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "constant-combinator";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/decider-combinator.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Decider-combinator.png";
-doc["stack_size"] = 50;
-doc["order"] = "b[combinators]-b[decider-combinator]";
-doc["place_result"] = "decider-combinator";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "decider-combinator";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/arithmetic-combinator.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Arithmetic-combinator.png";
-doc["stack_size"] = 50;
-doc["order"] = "b[combinators]-a[arithmetic-combinator]";
-doc["place_result"] = "arithmetic-combinator";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "arithmetic-combinator";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/processing-unit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Processing-unit.png";
-doc["stack_size"] = 100;
-doc["order"] = "f[processing-unit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "processing-unit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/electronic-circuit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Electronic-circuit.png";
-doc["stack_size"] = 200;
-doc["order"] = "d[electronic-circuit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "electronic-circuit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/flying-robot-frame.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Flying-robot-frame.png";
-doc["stack_size"] = 50;
-doc["order"] = "k[flying-robot-frame]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "flying-robot-frame";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/pipe.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Pipe.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "pipe";
-doc["order"] = "a[pipe]-a[pipe]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "pipe";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/assembling-machine-1.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-1.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "assembling-machine-1";
-doc["order"] = "a[assembling-machine-1]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "assembling-machine-1";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/logistic-chest-passive-provider.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-passive-provider.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "logistic-chest-passive-provider";
-doc["order"] = "b[storage]-c[logistic-chest-passive-provider]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "logistic-chest-passive-provider";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/gun-turret.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Gun-turret.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "gun-turret";
-doc["order"] = "b[turret]-a[gun-turret]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "gun-turret";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/substation.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Substation.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "substation";
-doc["order"] = "a[energy]-d[substation]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "substation";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/sulfur.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Sulfur.png";
-doc["stack_size"] = 50;
-doc["order"] = "f[sulfur]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "sulfur";
-doc["subgroup"] = "raw-material";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/power-switch.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Power-switch.png";
-doc["stack_size"] = 50;
-doc["order"] = "c[other]-a[power-switch]";
-doc["place_result"] = "power-switch";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "power-switch";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/coin.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Coin.png";
-doc["stack_size"] = 100000;
-doc["order"] = "y";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "coin";
-doc["subgroup"] = "science-pack";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/electric-mining-drill.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Electric-mining-drill.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "electric-mining-drill";
-doc["order"] = "a[items]-b[electric-mining-drill]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "electric-mining-drill";
-doc["subgroup"] = "extraction-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/electric-furnace.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Electric-furnace.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "electric-furnace";
-doc["order"] = "c[electric-furnace]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "electric-furnace";
-doc["subgroup"] = "smelting-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-silo.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-silo.png";
-doc["stack_size"] = 1;
-doc["place_result"] = "rocket-silo";
-doc["order"] = "e[rocket-silo]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "rocket-silo";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-stick.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-stick.png";
-doc["stack_size"] = 100;
-doc["order"] = "b[iron-stick]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "iron-stick";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/plastic-bar.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Plastic-bar.png";
-doc["stack_size"] = 100;
-doc["order"] = "g[plastic-bar]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "plastic-bar";
-doc["subgroup"] = "raw-material";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/wood.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Wood.png";
-doc["stack_size"] = 50;
-doc["order"] = "a[wood]";
-doc["subgroup"] = "raw-material";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "wood";
-doc["fuel_value"] = "2MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/solid-fuel.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Solid-fuel.png";
-doc["stack_size"] = 50;
-doc["order"] = "c[solid-fuel]";
-doc["subgroup"] = "raw-resource";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "solid-fuel";
-doc["fuel_value"] = "25MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/night-vision-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Night-vision-equipment.png";
-doc["stack_size"] = 20;
-doc["order"] = "f[night-vision]-a[night-vision-equipment]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "night-vision-equipment";
-doc["placed_as_equipment_result"] = "night-vision-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fluid/empty-barrel.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Empty-barrel.png";
-doc["stack_size"] = 10;
-doc["order"] = "a[empty-barrel]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "empty-barrel";
-doc["subgroup"] = "barrel";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/big-electric-pole.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Big-electric-pole.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "big-electric-pole";
-doc["order"] = "a[energy]-c[big-electric-pole]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "big-electric-pole";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/train-stop.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Train-stop.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "train-stop";
-doc["order"] = "a[train-system]-c[train-stop]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "train-stop";
-doc["subgroup"] = "transport";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stone-wall.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stone-wall.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "stone-wall";
-doc["order"] = "a[stone-wall]-a[stone-wall]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stone-wall";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/boiler.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Boiler.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "boiler";
-doc["order"] = "b[steam-power]-a[boiler]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "boiler";
-doc["subgroup"] = "energy";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/oil-refinery.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Oil-refinery.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "oil-refinery";
-doc["order"] = "d[refinery]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "oil-refinery";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/pumpjack.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Pumpjack.png";
-doc["stack_size"] = 20;
-doc["place_result"] = "pumpjack";
-doc["order"] = "b[fluids]-b[pumpjack]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "pumpjack";
-doc["subgroup"] = "extraction-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/small-pump.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Small-pump.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "small-pump";
-doc["order"] = "b[pipe]-c[small-pump]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "small-pump";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/storage-tank.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Storage-tank.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "storage-tank";
-doc["order"] = "b[fluid]-a[storage-tank]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "storage-tank";
-doc["subgroup"] = "storage";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/personal-laser-defense-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Personal-laser-defense-equipment.png";
-doc["stack_size"] = 20;
-doc["order"] = "d[active-defense]-a[personal-laser-defense-equipment]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "personal-laser-defense-equipment";
-doc["placed_as_equipment_result"] = "personal-laser-defense-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/beacon.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Beacon.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "beacon";
-doc["order"] = "a[beacon]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "beacon";
-doc["subgroup"] = "module";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fusion-reactor-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fusion-reactor-equipment.png";
-doc["stack_size"] = 20;
-doc["order"] = "a[energy-source]-b[fusion-reactor]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "fusion-reactor-equipment";
-doc["placed_as_equipment_result"] = "fusion-reactor-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/radar.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Radar.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "radar";
-doc["order"] = "d[radar]-a[radar]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "radar";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/accumulator.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Accumulator.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "accumulator";
-doc["order"] = "e[accumulator]-a[accumulator]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "accumulator";
-doc["subgroup"] = "energy";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/explosives.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Explosives.png";
-doc["stack_size"] = 50;
-doc["order"] = "i[explosives]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "explosives";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-fuel.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-fuel.png";
-doc["stack_size"] = 10;
-doc["order"] = "m[rocket-fuel]";
-doc["subgroup"] = "intermediate-product";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "rocket-fuel";
-doc["fuel_value"] = "225MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/solar-panel-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Solar-panel-equipment.png";
-doc["stack_size"] = 20;
-doc["order"] = "a[energy-source]-a[solar-panel]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "solar-panel-equipment";
-doc["placed_as_equipment_result"] = "solar-panel-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/logistic-chest-storage.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-storage.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "logistic-chest-storage";
-doc["order"] = "b[storage]-c[logistic-chest-storage]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "logistic-chest-storage";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-gear-wheel.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-gear-wheel.png";
-doc["stack_size"] = 100;
-doc["order"] = "c[iron-gear-wheel]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "iron-gear-wheel";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
+doc["name"] = "solar-panel";
 doc["icon"] = "__base__/graphics/icons/solar-panel.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Solar-panel.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "solar-panel";
 doc["order"] = "d[solar-panel]-a[solar-panel]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "solar-panel";
-doc["subgroup"] = "energy";
+doc["place_result"] = "solar-panel";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/battery.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Battery.png";
-doc["stack_size"] = 200;
-doc["order"] = "j[battery]";
+doc["type"] = "item";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "battery";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/express-transport-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Express-transport-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "express-transport-belt";
-doc["order"] = "a[transport-belt]-c[express-transport-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "express-transport-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/copper-cable.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Copper-cable.png";
-doc["stack_size"] = 200;
-doc["order"] = "a[copper-cable]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "copper-cable";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/logistic-robot.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-robot.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "logistic-robot";
-doc["order"] = "a[robot]-a[logistic-robot]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "logistic-robot";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/pipe-to-ground.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Pipe-to-ground.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "pipe-to-ground";
-doc["order"] = "a[pipe]-b[pipe-to-ground]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "pipe-to-ground";
-doc["subgroup"] = "energy-pipe-distribution";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/splitter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Splitter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "splitter";
-doc["order"] = "c[splitter]-a[splitter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "splitter";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
+doc["stack_size"] = 100;
+doc["name"] = "copper-plate";
 doc["icon"] = "__base__/graphics/icons/copper-plate.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Copper-plate.png";
-doc["stack_size"] = 100;
 doc["order"] = "c[copper-plate]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "copper-plate";
 doc["subgroup"] = "raw-material";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/advanced-circuit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Advanced-circuit.png";
-doc["stack_size"] = 200;
-doc["order"] = "e[advanced-circuit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
 doc["type"] = "item";
-doc["name"] = "advanced-circuit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/rocket-structure.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-structure.png";
-doc["stack_size"] = 10;
-doc["order"] = "l[rocket-structure]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "low-density-structure";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/loader.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Loader.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "loader";
-doc["order"] = "d[loader]-a[basic-loader]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "loader";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stack-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stack-inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "stack-inserter";
-doc["order"] = "f[stack-inserter]";
 flags = [];
 flags.push("goes-to-quickbar")
 doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stack-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/battery-mk2-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Battery-mk2-equipment.png";
-doc["order"] = "c[battery]-b[battery-equipment-mk2]";
-doc["subgroup"] = "equipment";
-doc["default_request_amount"] = 10;
-doc["stack_size"] = 50;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "battery-mk2-equipment";
-doc["placed_as_equipment_result"] = "battery-mk2-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/steel-chest.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Steel-chest.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "steel-chest";
-doc["order"] = "a[items]-c[steel-chest]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "steel-chest";
-doc["subgroup"] = "storage";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/coal.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Coal.png";
-doc["order"] = "b[coal]";
-doc["subgroup"] = "raw-material";
-doc["stack_size"] = 50;
-doc["dark_background_icon"] = "__base__/graphics/icons/coal-dark-background.png";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "coal";
-doc["fuel_value"] = "8MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/small-plane.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Small-plane.png";
 doc["stack_size"] = 1;
-doc["order"] = "h[small-plane]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "small-plane";
 doc["subgroup"] = "defensive-structure";
+doc["name"] = "rocket-silo";
+doc["icon"] = "__base__/graphics/icons/rocket-silo.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-silo.png";
+doc["order"] = "e[rocket-silo]";
+doc["place_result"] = "rocket-silo";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/fast-loader.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fast-loader.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "fast-loader";
-doc["order"] = "d[loader]-b[fast-loader]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
 doc["type"] = "item";
-doc["name"] = "fast-loader";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/lab.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Lab.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "lab";
-doc["order"] = "g[lab]";
 flags = [];
 flags.push("goes-to-quickbar")
 doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "lab";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/exoskeleton-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Exoskeleton-equipment.png";
-doc["stack_size"] = 10;
-doc["order"] = "e[exoskeleton]-a[exoskeleton-equipment]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "exoskeleton-equipment";
-doc["placed_as_equipment_result"] = "exoskeleton-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-ore.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-ore.png";
 doc["stack_size"] = 50;
-doc["order"] = "e[iron-ore]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "iron-ore";
-doc["subgroup"] = "raw-resource";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/flamethrower-turret.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Flamethrower-turret.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "flamethrower-turret";
-doc["order"] = "b[turret]-a[flamethrower-turret]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "flamethrower-turret";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/steel-plate.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Steel-plate.png";
-doc["stack_size"] = 100;
-doc["order"] = "d[steel-plate]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "steel-plate";
-doc["subgroup"] = "raw-material";
-db.item.insert(doc);
-
-doc = {};
+doc["subgroup"] = "transport";
+doc["name"] = "rail-chain-signal";
 doc["icon"] = "__base__/graphics/icons/rail-chain-signal.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Rail-chain-signal.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "rail-chain-signal";
 doc["order"] = "a[train-system]-e[rail-signal-chain]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "rail-chain-signal";
-doc["subgroup"] = "transport";
+doc["place_result"] = "rail-chain-signal";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/rail-signal.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Rail-signal.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "rail-signal";
-doc["order"] = "a[train-system]-d[rail-signal]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
 doc["type"] = "item";
-doc["name"] = "rail-signal";
-doc["subgroup"] = "transport";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/chemical-plant.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Chemical-plant.png";
-doc["stack_size"] = 10;
-doc["place_result"] = "chemical-plant";
-doc["order"] = "e[chemical-plant]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "chemical-plant";
-doc["subgroup"] = "production-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stone-brick.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stone-brick.png";
-place_as_tile = [];
-place_as_tile.push("stone-path")
-place_as_tile.push("table: 0000000000683540")
-place_as_tile.push(4)
-doc["place_as_tile"] = place_as_tile;
-doc["stack_size"] = 100;
-doc["order"] = "a[stone-brick]";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stone-brick";
-doc["subgroup"] = "terrain";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/gate.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Gate.png";
 doc["stack_size"] = 50;
-doc["place_result"] = "gate";
-doc["order"] = "a[wall]-b[gate]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "gate";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/personal-roboport-equipment.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Personal-roboport-equipment.png";
-doc["stack_size"] = 5;
-doc["order"] = "e[robotics]-a[personal-roboport-equipment]";
-doc["subgroup"] = "equipment";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "personal-roboport-equipment";
-doc["placed_as_equipment_result"] = "personal-roboport-equipment";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/engine-unit.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Engine-unit.png";
-doc["stack_size"] = 50;
-doc["order"] = "g[engine-unit]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "engine-unit";
-doc["subgroup"] = "intermediate-product";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/alien-artifact.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Alien-artifact.png";
-doc["stack_size"] = 500;
 doc["default_request_amount"] = 10;
-doc["order"] = "g[alien-artifact]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "alien-artifact";
-doc["subgroup"] = "raw-material";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/transport-belt.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Transport-belt.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "transport-belt";
-doc["order"] = "a[transport-belt]-a[transport-belt]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "transport-belt";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/computer.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Computer.png";
-doc["stack_size"] = 1;
-doc["order"] = "g[computer]";
-flags = [];
-flags.push("goes-to-quickbar")
-flags.push("hidden")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "computer";
-doc["subgroup"] = "defensive-structure";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/iron-chest.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Iron-chest.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "iron-chest";
-doc["order"] = "a[items]-b[iron-chest]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "iron-chest";
-doc["subgroup"] = "storage";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/small-lamp.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Small-lamp.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "small-lamp";
-doc["order"] = "c[light]-a[small-lamp]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "small-lamp";
-doc["subgroup"] = "energy";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/logistic-chest-active-provider.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-active-provider.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "logistic-chest-active-provider";
-doc["order"] = "b[storage]-c[logistic-chest-active-provider]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "logistic-chest-active-provider";
-doc["subgroup"] = "logistic-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/raw-wood.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Raw-wood.png";
-doc["stack_size"] = 100;
-doc["order"] = "a[raw-wood]";
-doc["subgroup"] = "raw-material";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "raw-wood";
-doc["fuel_value"] = "4MJ";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/burner-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Burner-inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "burner-inserter";
-doc["order"] = "a[burner-inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "burner-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stack-filter-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stack-filter-inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "stack-filter-inserter";
-doc["order"] = "g[stack-filter-inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stack-filter-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/stone-furnace.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Stone-furnace.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "stone-furnace";
-doc["order"] = "a[stone-furnace]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "stone-furnace";
-doc["subgroup"] = "smelting-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/burner-mining-drill.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Burner-mining-drill.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "burner-mining-drill";
-doc["order"] = "a[items]-a[burner-mining-drill]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "burner-mining-drill";
-doc["subgroup"] = "extraction-machine";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/long-handed-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Long-handed-inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "long-handed-inserter";
-doc["order"] = "c[long-handed-inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "long-handed-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fast-inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fast-inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "fast-inserter";
-doc["order"] = "d[fast-inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "fast-inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fluid/crude-oil-barrel.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Crude-oil-barrel.png";
-doc["stack_size"] = 10;
-doc["order"] = "b[crude-oil-barrel]";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "crude-oil-barrel";
-doc["subgroup"] = "barrel";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/red-wire.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Red-wire.png";
-doc["stack_size"] = 200;
-doc["order"] = "a[wires]-b[red-wire]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "red-wire";
-doc["subgroup"] = "circuit-network";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/fast-splitter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Fast-splitter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "fast-splitter";
-doc["order"] = "c[splitter]-b[fast-splitter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "fast-splitter";
-doc["subgroup"] = "belt";
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/inserter.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Inserter.png";
-doc["stack_size"] = 50;
-doc["place_result"] = "inserter";
-doc["order"] = "b[inserter]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "inserter";
-doc["subgroup"] = "inserter";
-db.item.insert(doc);
-
-doc = {};
+doc["placed_as_equipment_result"] = "battery-equipment";
+doc["name"] = "battery-equipment";
 doc["icon"] = "__base__/graphics/icons/battery-equipment.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Battery-equipment.png";
 doc["order"] = "c[battery]-a[battery-equipment]";
 doc["subgroup"] = "equipment";
-doc["default_request_amount"] = 10;
-doc["stack_size"] = 50;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "battery-equipment";
-doc["placed_as_equipment_result"] = "battery-equipment";
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["place_result"] = "wooden-chest";
+doc["fuel_value"] = "4MJ";
+doc["stack_size"] = 50;
+doc["name"] = "wooden-chest";
+doc["icon"] = "__base__/graphics/icons/wooden-chest.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Wooden-chest.png";
+doc["order"] = "a[items]-a[wooden-chest]";
+doc["subgroup"] = "storage";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "iron-ore";
+doc["icon"] = "__base__/graphics/icons/iron-ore.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-ore.png";
+doc["order"] = "e[iron-ore]";
+doc["subgroup"] = "raw-resource";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "inserter";
+doc["icon"] = "__base__/graphics/icons/inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Inserter.png";
+doc["order"] = "b[inserter]";
+doc["place_result"] = "inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "extraction-machine";
+doc["name"] = "electric-mining-drill";
+doc["icon"] = "__base__/graphics/icons/electric-mining-drill.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Electric-mining-drill.png";
+doc["order"] = "a[items]-b[electric-mining-drill]";
+doc["place_result"] = "electric-mining-drill";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "energy";
+doc["name"] = "steam-engine";
+doc["icon"] = "__base__/graphics/icons/steam-engine.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Steam-engine.png";
+doc["order"] = "b[steam-power]-b[steam-engine]";
+doc["place_result"] = "steam-engine";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "explosives";
+doc["icon"] = "__base__/graphics/icons/explosives.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Explosives.png";
+doc["order"] = "i[explosives]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["default_request_amount"] = 10;
+doc["stack_size"] = 500;
+doc["name"] = "alien-artifact";
+doc["icon"] = "__base__/graphics/icons/alien-artifact.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Alien-artifact.png";
+doc["order"] = "g[alien-artifact]";
+doc["subgroup"] = "raw-material";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "production-machine";
+doc["name"] = "assembling-machine-3";
+doc["icon"] = "__base__/graphics/icons/assembling-machine-3.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-3.png";
+doc["order"] = "c[assembling-machine-3]";
+doc["place_result"] = "assembling-machine-3";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "flamethrower-turret";
+doc["icon"] = "__base__/graphics/icons/flamethrower-turret.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Flamethrower-turret.png";
+doc["order"] = "b[turret]-a[flamethrower-turret]";
+doc["place_result"] = "flamethrower-turret";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "laser-turret";
+doc["icon"] = "__base__/graphics/icons/laser-turret.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Laser-turret.png";
+doc["order"] = "b[turret]-b[laser-turret]";
+doc["place_result"] = "laser-turret";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "express-transport-belt";
+doc["icon"] = "__base__/graphics/icons/express-transport-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Express-transport-belt.png";
+doc["order"] = "a[transport-belt]-c[express-transport-belt]";
+doc["place_result"] = "express-transport-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "storage";
+doc["name"] = "iron-chest";
+doc["icon"] = "__base__/graphics/icons/iron-chest.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-chest.png";
+doc["order"] = "a[items]-b[iron-chest]";
+doc["place_result"] = "iron-chest";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "express-underground-belt";
+doc["icon"] = "__base__/graphics/icons/express-underground-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Express-underground-belt.png";
+doc["order"] = "b[underground-belt]-c[express-underground-belt]";
+doc["place_result"] = "express-underground-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "engine-unit";
+doc["icon"] = "__base__/graphics/icons/engine-unit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Engine-unit.png";
+doc["order"] = "g[engine-unit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+place_as_tile = [];
+place_as_tile.push("hazard-concrete-left")
+place_as_tile.push(4)
+place_as_tile.push("table: 00000000006b9fb0")
+doc["place_as_tile"] = place_as_tile;
+doc["stack_size"] = 100;
+doc["name"] = "hazard-concrete";
+doc["icon"] = "__base__/graphics/icons/hazard-concrete.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Hazard-concrete.png";
+doc["order"] = "b[concrete]-b[hazard]";
+doc["subgroup"] = "terrain";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "loader";
+doc["icon"] = "__base__/graphics/icons/loader.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Loader.png";
+doc["order"] = "d[loader]-a[basic-loader]";
+doc["place_result"] = "loader";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+place_as_tile = [];
+place_as_tile.push("concrete")
+place_as_tile.push(4)
+place_as_tile.push("table: 00000000006ba0f0")
+doc["place_as_tile"] = place_as_tile;
+doc["stack_size"] = 100;
+doc["name"] = "concrete";
+doc["icon"] = "__base__/graphics/icons/concrete.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Concrete.png";
+doc["order"] = "b[concrete]-a[plain]";
+doc["subgroup"] = "terrain";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "sulfur";
+doc["icon"] = "__base__/graphics/icons/sulfur.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Sulfur.png";
+doc["order"] = "f[sulfur]";
+doc["subgroup"] = "raw-material";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+doc["name"] = "satellite";
+doc["icon"] = "__base__/graphics/icons/satellite.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Satellite.png";
+doc["order"] = "p[satellite]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+doc["name"] = "rocket-part";
+doc["icon"] = "__base__/graphics/icons/rocket-part.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-part.png";
+doc["order"] = "o[rocket-part]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "pipe-to-ground";
+doc["icon"] = "__base__/graphics/icons/pipe-to-ground.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Pipe-to-ground.png";
+doc["order"] = "a[pipe]-b[pipe-to-ground]";
+doc["place_result"] = "pipe-to-ground";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "intermediate-product";
+doc["name"] = "rocket-fuel";
+doc["icon"] = "__base__/graphics/icons/rocket-fuel.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-fuel.png";
+doc["order"] = "m[rocket-fuel]";
+doc["fuel_value"] = "225MJ";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "production-machine";
+doc["name"] = "assembling-machine-1";
+doc["icon"] = "__base__/graphics/icons/assembling-machine-1.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-1.png";
+doc["order"] = "a[assembling-machine-1]";
+doc["place_result"] = "assembling-machine-1";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "raw-resource";
+doc["name"] = "solid-fuel";
+doc["icon"] = "__base__/graphics/icons/solid-fuel.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Solid-fuel.png";
+doc["order"] = "c[solid-fuel]";
+doc["fuel_value"] = "25MJ";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["name"] = "low-density-structure";
+doc["icon"] = "__base__/graphics/icons/rocket-structure.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-structure.png";
+doc["order"] = "l[rocket-structure]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "medium-electric-pole";
+doc["icon"] = "__base__/graphics/icons/medium-electric-pole.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Medium-electric-pole.png";
+doc["order"] = "a[energy]-b[medium-electric-pole]";
+doc["place_result"] = "medium-electric-pole";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "circuit-network";
+doc["name"] = "power-switch";
+doc["icon"] = "__base__/graphics/icons/power-switch.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Power-switch.png";
+doc["order"] = "c[other]-a[power-switch]";
+doc["place_result"] = "power-switch";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["subgroup"] = "extraction-machine";
+doc["name"] = "offshore-pump";
+doc["icon"] = "__base__/graphics/icons/offshore-pump.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Offshore-pump.png";
+doc["order"] = "b[fluids]-a[offshore-pump]";
+doc["place_result"] = "offshore-pump";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "circuit-network";
+doc["name"] = "constant-combinator";
+doc["icon"] = "__base__/graphics/icons/constant-combinator.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Constant-combinator.png";
+doc["order"] = "b[combinators]-c[constant-combinator]";
+doc["place_result"] = "constant-combinator";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+doc["name"] = "small-plane";
+doc["icon"] = "__base__/graphics/icons/small-plane.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Small-plane.png";
+doc["order"] = "h[small-plane]";
+doc["subgroup"] = "defensive-structure";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "circuit-network";
+doc["name"] = "decider-combinator";
+doc["icon"] = "__base__/graphics/icons/decider-combinator.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Decider-combinator.png";
+doc["order"] = "b[combinators]-b[decider-combinator]";
+doc["place_result"] = "decider-combinator";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["placed_as_equipment_result"] = "night-vision-equipment";
+doc["name"] = "night-vision-equipment";
+doc["icon"] = "__base__/graphics/icons/night-vision-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Night-vision-equipment.png";
+doc["order"] = "f[night-vision]-a[night-vision-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["name"] = "empty-barrel";
+doc["icon"] = "__base__/graphics/icons/fluid/empty-barrel.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Empty-barrel.png";
+doc["order"] = "a[empty-barrel]";
+doc["subgroup"] = "barrel";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "storage";
+doc["name"] = "steel-chest";
+doc["icon"] = "__base__/graphics/icons/steel-chest.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Steel-chest.png";
+doc["order"] = "a[items]-c[steel-chest]";
+doc["place_result"] = "steel-chest";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "battery";
+doc["icon"] = "__base__/graphics/icons/battery.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Battery.png";
+doc["order"] = "j[battery]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "stack-filter-inserter";
+doc["icon"] = "__base__/graphics/icons/stack-filter-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stack-filter-inserter.png";
+doc["order"] = "g[stack-filter-inserter]";
+doc["place_result"] = "stack-filter-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+place_as_tile = [];
+place_as_tile.push("grass")
+place_as_tile.push(1)
+place_as_tile.push("table: 00000000006b9970")
+doc["place_as_tile"] = place_as_tile;
+doc["stack_size"] = 100;
+doc["name"] = "landfill";
+doc["icon"] = "__base__/graphics/icons/landfill.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Landfill.png";
+doc["order"] = "c[landfill]-a[dirt]";
+doc["subgroup"] = "terrain";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "smelting-machine";
+doc["name"] = "stone-furnace";
+doc["icon"] = "__base__/graphics/icons/stone-furnace.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stone-furnace.png";
+doc["order"] = "a[stone-furnace]";
+doc["place_result"] = "stone-furnace";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "plastic-bar";
+doc["icon"] = "__base__/graphics/icons/plastic-bar.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Plastic-bar.png";
+doc["order"] = "g[plastic-bar]";
+doc["subgroup"] = "raw-material";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["placed_as_equipment_result"] = "solar-panel-equipment";
+doc["name"] = "solar-panel-equipment";
+doc["icon"] = "__base__/graphics/icons/solar-panel-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Solar-panel-equipment.png";
+doc["order"] = "a[energy-source]-a[solar-panel]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "copper-ore";
+doc["icon"] = "__base__/graphics/icons/copper-ore.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Copper-ore.png";
+doc["order"] = "f[copper-ore]";
+doc["subgroup"] = "raw-resource";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "copper-cable";
+doc["icon"] = "__base__/graphics/icons/copper-cable.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Copper-cable.png";
+doc["order"] = "a[copper-cable]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["name"] = "crude-oil-barrel";
+doc["icon"] = "__base__/graphics/icons/fluid/crude-oil-barrel.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Crude-oil-barrel.png";
+doc["order"] = "b[crude-oil-barrel]";
+doc["subgroup"] = "barrel";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "iron-stick";
+doc["icon"] = "__base__/graphics/icons/iron-stick.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-stick.png";
+doc["order"] = "b[iron-stick]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "production-machine";
+doc["name"] = "oil-refinery";
+doc["icon"] = "__base__/graphics/icons/oil-refinery.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Oil-refinery.png";
+doc["order"] = "d[refinery]";
+doc["place_result"] = "oil-refinery";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "circuit-network";
+doc["name"] = "arithmetic-combinator";
+doc["icon"] = "__base__/graphics/icons/arithmetic-combinator.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Arithmetic-combinator.png";
+doc["order"] = "b[combinators]-a[arithmetic-combinator]";
+doc["place_result"] = "arithmetic-combinator";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "production-machine";
+doc["name"] = "chemical-plant";
+doc["icon"] = "__base__/graphics/icons/chemical-plant.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Chemical-plant.png";
+doc["order"] = "e[chemical-plant]";
+doc["place_result"] = "chemical-plant";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "red-wire";
+doc["icon"] = "__base__/graphics/icons/red-wire.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Red-wire.png";
+doc["order"] = "a[wires]-b[red-wire]";
+doc["subgroup"] = "circuit-network";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "logistic-chest-storage";
+doc["icon"] = "__base__/graphics/icons/logistic-chest-storage.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-storage.png";
+doc["order"] = "b[storage]-c[logistic-chest-storage]";
+doc["place_result"] = "logistic-chest-storage";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "small-pump";
+doc["icon"] = "__base__/graphics/icons/small-pump.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Small-pump.png";
+doc["order"] = "b[pipe]-c[small-pump]";
+doc["place_result"] = "small-pump";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "electric-engine-unit";
+doc["icon"] = "__base__/graphics/icons/electric-engine-unit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Electric-engine-unit.png";
+doc["order"] = "h[electric-engine-unit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "express-loader";
+doc["icon"] = "__base__/graphics/icons/express-loader.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Express-loader.png";
+doc["order"] = "d[loader]-c[express-loader]";
+doc["place_result"] = "express-loader";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy";
+doc["name"] = "small-lamp";
+doc["icon"] = "__base__/graphics/icons/small-lamp.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Small-lamp.png";
+doc["order"] = "c[light]-a[small-lamp]";
+doc["place_result"] = "small-lamp";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "module";
+doc["name"] = "beacon";
+doc["icon"] = "__base__/graphics/icons/beacon.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Beacon.png";
+doc["order"] = "a[beacon]";
+doc["place_result"] = "beacon";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "smelting-machine";
+doc["name"] = "steel-furnace";
+doc["icon"] = "__base__/graphics/icons/steel-furnace.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Steel-furnace.png";
+doc["order"] = "b[steel-furnace]";
+doc["place_result"] = "steel-furnace";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "fast-loader";
+doc["icon"] = "__base__/graphics/icons/fast-loader.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fast-loader.png";
+doc["order"] = "d[loader]-b[fast-loader]";
+doc["place_result"] = "fast-loader";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["default_request_amount"] = 10;
+doc["placed_as_equipment_result"] = "energy-shield-mk2-equipment";
+doc["name"] = "energy-shield-mk2-equipment";
 doc["icon"] = "__base__/graphics/icons/energy-shield-mk2-equipment.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Energy-shield-mk2-equipment.png";
 doc["order"] = "b[shield]-b[energy-shield-equipment-mk2]";
 doc["subgroup"] = "equipment";
-doc["default_request_amount"] = 10;
-doc["stack_size"] = 50;
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "item";
-doc["name"] = "energy-shield-mk2-equipment";
-doc["placed_as_equipment_result"] = "energy-shield-mk2-equipment";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/deconstruction-planner.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Deconstruction-planner.png";
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "raw-material";
+doc["name"] = "wood";
+doc["icon"] = "__base__/graphics/icons/wood.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Wood.png";
+doc["order"] = "a[wood]";
+doc["fuel_value"] = "2MJ";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy";
+doc["name"] = "accumulator";
+doc["icon"] = "__base__/graphics/icons/accumulator.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Accumulator.png";
+doc["order"] = "e[accumulator]-a[accumulator]";
+doc["place_result"] = "accumulator";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "substation";
+doc["icon"] = "__base__/graphics/icons/substation.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Substation.png";
+doc["order"] = "a[energy]-d[substation]";
+doc["place_result"] = "substation";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "big-electric-pole";
+doc["icon"] = "__base__/graphics/icons/big-electric-pole.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Big-electric-pole.png";
+doc["order"] = "a[energy]-c[big-electric-pole]";
+doc["place_result"] = "big-electric-pole";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "stack-inserter";
+doc["icon"] = "__base__/graphics/icons/stack-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stack-inserter.png";
+doc["order"] = "f[stack-inserter]";
+doc["place_result"] = "stack-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "burner-inserter";
+doc["icon"] = "__base__/graphics/icons/burner-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Burner-inserter.png";
+doc["order"] = "a[burner-inserter]";
+doc["place_result"] = "burner-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "roboport";
+doc["icon"] = "__base__/graphics/icons/roboport.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Roboport.png";
+doc["order"] = "c[signal]-a[roboport]";
+doc["place_result"] = "roboport";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "stone";
+doc["icon"] = "__base__/graphics/icons/stone.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stone.png";
+doc["order"] = "d[stone]";
+doc["subgroup"] = "raw-resource";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "production-machine";
+doc["name"] = "assembling-machine-2";
+doc["icon"] = "__base__/graphics/icons/assembling-machine-2.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Assembling-machine-2.png";
+doc["order"] = "b[assembling-machine-2]";
+doc["place_result"] = "assembling-machine-2";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "logistic-chest-requester";
+doc["icon"] = "__base__/graphics/icons/logistic-chest-requester.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-requester.png";
+doc["order"] = "b[storage]-c[logistic-chest-requester]";
+doc["place_result"] = "logistic-chest-requester";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["subgroup"] = "extraction-machine";
+doc["name"] = "pumpjack";
+doc["icon"] = "__base__/graphics/icons/pumpjack.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Pumpjack.png";
+doc["order"] = "b[fluids]-b[pumpjack]";
+doc["place_result"] = "pumpjack";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "logistic-chest-active-provider";
+doc["icon"] = "__base__/graphics/icons/logistic-chest-active-provider.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-active-provider.png";
+doc["order"] = "b[storage]-c[logistic-chest-active-provider]";
+doc["place_result"] = "logistic-chest-active-provider";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "iron-gear-wheel";
+doc["icon"] = "__base__/graphics/icons/iron-gear-wheel.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-gear-wheel.png";
+doc["order"] = "c[iron-gear-wheel]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["placed_as_equipment_result"] = "fusion-reactor-equipment";
+doc["name"] = "fusion-reactor-equipment";
+doc["icon"] = "__base__/graphics/icons/fusion-reactor-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fusion-reactor-equipment.png";
+doc["order"] = "a[energy-source]-b[fusion-reactor]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "advanced-circuit";
+doc["icon"] = "__base__/graphics/icons/advanced-circuit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Advanced-circuit.png";
+doc["order"] = "e[advanced-circuit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "fast-underground-belt";
+doc["icon"] = "__base__/graphics/icons/fast-underground-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fast-underground-belt.png";
+doc["order"] = "b[underground-belt]-b[fast-underground-belt]";
+doc["place_result"] = "fast-underground-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "construction-robot";
+doc["icon"] = "__base__/graphics/icons/construction-robot.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Construction-robot.png";
+doc["order"] = "a[robot]-b[construction-robot]";
+doc["place_result"] = "construction-robot";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "gun-turret";
+doc["icon"] = "__base__/graphics/icons/gun-turret.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Gun-turret.png";
+doc["order"] = "b[turret]-a[gun-turret]";
+doc["place_result"] = "gun-turret";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "logistic-robot";
+doc["icon"] = "__base__/graphics/icons/logistic-robot.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-robot.png";
+doc["order"] = "a[robot]-a[logistic-robot]";
+doc["place_result"] = "logistic-robot";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "processing-unit";
+doc["icon"] = "__base__/graphics/icons/processing-unit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Processing-unit.png";
+doc["order"] = "f[processing-unit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["place_result"] = "small-electric-pole";
+doc["fuel_value"] = "4MJ";
+doc["stack_size"] = 50;
+doc["name"] = "small-electric-pole";
+doc["icon"] = "__base__/graphics/icons/small-electric-pole.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Small-electric-pole.png";
+doc["order"] = "a[energy]-a[small-electric-pole]";
+doc["subgroup"] = "energy-pipe-distribution";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "logistic-network";
+doc["name"] = "logistic-chest-passive-provider";
+doc["icon"] = "__base__/graphics/icons/logistic-chest-passive-provider.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Logistic-chest-passive-provider.png";
+doc["order"] = "b[storage]-c[logistic-chest-passive-provider]";
+doc["place_result"] = "logistic-chest-passive-provider";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "smelting-machine";
+doc["name"] = "electric-furnace";
+doc["icon"] = "__base__/graphics/icons/electric-furnace.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Electric-furnace.png";
+doc["order"] = "c[electric-furnace]";
+doc["place_result"] = "electric-furnace";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["placed_as_equipment_result"] = "discharge-defense-equipment";
+doc["name"] = "discharge-defense-equipment";
+doc["icon"] = "__base__/graphics/icons/discharge-defense-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Discharge-defense-equipment.png";
+doc["order"] = "d[active-defense]-b[discharge-defense-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["trigger_radius"] = 1;
+doc["place_result"] = "land-mine";
+doc["stack_size"] = 20;
+doc["subgroup"] = "gun";
+doc["name"] = "land-mine";
+doc["icon"] = "__base__/graphics/icons/land-mine.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Land-mine.png";
+doc["order"] = "f[land-mine]";
+doc["damage_radius"] = 5;
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["default_request_amount"] = 10;
+doc["placed_as_equipment_result"] = "battery-mk2-equipment";
+doc["name"] = "battery-mk2-equipment";
+doc["icon"] = "__base__/graphics/icons/battery-mk2-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Battery-mk2-equipment.png";
+doc["order"] = "c[battery]-b[battery-equipment-mk2]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "extraction-machine";
+doc["name"] = "burner-mining-drill";
+doc["icon"] = "__base__/graphics/icons/burner-mining-drill.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Burner-mining-drill.png";
+doc["order"] = "a[items]-a[burner-mining-drill]";
+doc["place_result"] = "burner-mining-drill";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy";
+doc["name"] = "boiler";
+doc["icon"] = "__base__/graphics/icons/boiler.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Boiler.png";
+doc["order"] = "b[steam-power]-a[boiler]";
+doc["place_result"] = "boiler";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "transport";
+doc["name"] = "rail-signal";
+doc["icon"] = "__base__/graphics/icons/rail-signal.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rail-signal.png";
+doc["order"] = "a[train-system]-d[rail-signal]";
+doc["place_result"] = "rail-signal";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "fast-splitter";
+doc["icon"] = "__base__/graphics/icons/fast-splitter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fast-splitter.png";
+doc["order"] = "c[splitter]-b[fast-splitter]";
+doc["place_result"] = "fast-splitter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "green-wire";
+doc["icon"] = "__base__/graphics/icons/green-wire.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Green-wire.png";
+doc["order"] = "a[wires]-c[green-wire]";
+doc["subgroup"] = "circuit-network";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "splitter";
+doc["icon"] = "__base__/graphics/icons/splitter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Splitter.png";
+doc["order"] = "c[splitter]-a[splitter]";
+doc["place_result"] = "splitter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy";
+doc["name"] = "electric-energy-interface";
+doc["icon"] = "__base__/graphics/icons/accumulator.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Accumulator.png";
+doc["order"] = "e[electric-energy-interface]-b[electric-energy-interface]";
+doc["place_result"] = "electric-energy-interface";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "stone-wall";
+doc["icon"] = "__base__/graphics/icons/stone-wall.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stone-wall.png";
+doc["order"] = "a[stone-wall]-a[stone-wall]";
+doc["place_result"] = "stone-wall";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+place_as_tile = [];
+place_as_tile.push("stone-path")
+place_as_tile.push(4)
+place_as_tile.push("table: 00000000006811b0")
+doc["place_as_tile"] = place_as_tile;
+doc["stack_size"] = 100;
+doc["name"] = "stone-brick";
+doc["icon"] = "__base__/graphics/icons/stone-brick.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Stone-brick.png";
+doc["order"] = "a[stone-brick]";
+doc["subgroup"] = "terrain";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "iron-plate";
+doc["icon"] = "__base__/graphics/icons/iron-plate.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Iron-plate.png";
+doc["order"] = "b[iron-plate]";
+doc["subgroup"] = "raw-material";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "underground-belt";
+doc["icon"] = "__base__/graphics/icons/underground-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Underground-belt.png";
+doc["order"] = "b[underground-belt]-a[underground-belt]";
+doc["place_result"] = "underground-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 20;
+doc["placed_as_equipment_result"] = "personal-laser-defense-equipment";
+doc["name"] = "personal-laser-defense-equipment";
+doc["icon"] = "__base__/graphics/icons/personal-laser-defense-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Personal-laser-defense-equipment.png";
+doc["order"] = "d[active-defense]-a[personal-laser-defense-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["fuel_value"] = "8MJ";
+doc["stack_size"] = 50;
+doc["subgroup"] = "raw-material";
+doc["name"] = "coal";
+doc["icon"] = "__base__/graphics/icons/coal.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Coal.png";
+doc["order"] = "b[coal]";
+doc["dark_background_icon"] = "__base__/graphics/icons/coal-dark-background.png";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 5;
+doc["placed_as_equipment_result"] = "personal-roboport-equipment";
+doc["name"] = "personal-roboport-equipment";
+doc["icon"] = "__base__/graphics/icons/personal-roboport-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Personal-roboport-equipment.png";
+doc["order"] = "e[robotics]-a[personal-roboport-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 1;
+doc["name"] = "computer";
+doc["icon"] = "__base__/graphics/icons/computer.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Computer.png";
+doc["order"] = "g[computer]";
+doc["subgroup"] = "defensive-structure";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["name"] = "steel-plate";
+doc["icon"] = "__base__/graphics/icons/steel-plate.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Steel-plate.png";
+doc["order"] = "d[steel-plate]";
+doc["subgroup"] = "raw-material";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "express-splitter";
+doc["icon"] = "__base__/graphics/icons/express-splitter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Express-splitter.png";
+doc["order"] = "c[splitter]-c[express-splitter]";
+doc["place_result"] = "express-splitter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "transport";
+doc["name"] = "train-stop";
+doc["icon"] = "__base__/graphics/icons/train-stop.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Train-stop.png";
+doc["order"] = "a[train-system]-c[train-stop]";
+doc["place_result"] = "train-stop";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidd  en")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "player-port";
+doc["icon"] = "__base__/graphics/icons/player-port.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Player-port.png";
+doc["order"] = "z[not-used]";
+doc["place_result"] = "player-port";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["subgroup"] = "production-machine";
+doc["name"] = "lab";
+doc["icon"] = "__base__/graphics/icons/lab.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Lab.png";
+doc["order"] = "g[lab]";
+doc["place_result"] = "lab";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["name"] = "rocket-control-unit";
+doc["icon"] = "__base__/graphics/icons/rocket-control-unit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Rocket-control-unit.png";
+doc["order"] = "n[rocket-control-unit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["default_request_amount"] = 10;
+doc["placed_as_equipment_result"] = "energy-shield-equipment";
+doc["name"] = "energy-shield-equipment";
+doc["icon"] = "__base__/graphics/icons/energy-shield-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Energy-shield-equipment.png";
+doc["order"] = "b[shield]-a[energy-shield-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "storage";
+doc["name"] = "storage-tank";
+doc["icon"] = "__base__/graphics/icons/storage-tank.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Storage-tank.png";
+doc["order"] = "b[fluid]-a[storage-tank]";
+doc["place_result"] = "storage-tank";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "transport-belt";
+doc["icon"] = "__base__/graphics/icons/transport-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Transport-belt.png";
+doc["order"] = "a[transport-belt]-a[transport-belt]";
+doc["place_result"] = "transport-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 10;
+doc["placed_as_equipment_result"] = "exoskeleton-equipment";
+doc["name"] = "exoskeleton-equipment";
+doc["icon"] = "__base__/graphics/icons/exoskeleton-equipment.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Exoskeleton-equipment.png";
+doc["order"] = "e[exoskeleton]-a[exoskeleton-equipment]";
+doc["subgroup"] = "equipment";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "gate";
+doc["icon"] = "__base__/graphics/icons/gate.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Gate.png";
+doc["order"] = "a[wall]-b[gate]";
+doc["place_result"] = "gate";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "filter-inserter";
+doc["icon"] = "__base__/graphics/icons/filter-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Filter-inserter.png";
+doc["order"] = "e[filter-inserter]";
+doc["place_result"] = "filter-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "defensive-structure";
+doc["name"] = "radar";
+doc["icon"] = "__base__/graphics/icons/radar.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Radar.png";
+doc["order"] = "d[radar]-a[radar]";
+doc["place_result"] = "radar";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "long-handed-inserter";
+doc["icon"] = "__base__/graphics/icons/long-handed-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Long-handed-inserter.png";
+doc["order"] = "c[long-handed-inserter]";
+doc["place_result"] = "long-handed-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 200;
+doc["name"] = "electronic-circuit";
+doc["icon"] = "__base__/graphics/icons/electronic-circuit.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Electronic-circuit.png";
+doc["order"] = "d[electronic-circuit]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 100;
+doc["subgroup"] = "raw-material";
+doc["name"] = "raw-wood";
+doc["icon"] = "__base__/graphics/icons/raw-wood.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Raw-wood.png";
+doc["order"] = "a[raw-wood]";
+doc["fuel_value"] = "4MJ";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "inserter";
+doc["name"] = "fast-inserter";
+doc["icon"] = "__base__/graphics/icons/fast-inserter.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fast-inserter.png";
+doc["order"] = "d[fast-inserter]";
+doc["place_result"] = "fast-inserter";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "belt";
+doc["name"] = "fast-transport-belt";
+doc["icon"] = "__base__/graphics/icons/fast-transport-belt.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Fast-transport-belt.png";
+doc["order"] = "a[transport-belt]-b[fast-transport-belt]";
+doc["place_result"] = "fast-transport-belt";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["name"] = "flying-robot-frame";
+doc["icon"] = "__base__/graphics/icons/flying-robot-frame.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Flying-robot-frame.png";
+doc["order"] = "k[flying-robot-frame]";
+doc["subgroup"] = "intermediate-product";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+flags.push("hidden")
+doc["flags"] = flags;
+doc["stack_size"] = 100000;
+doc["name"] = "coin";
+doc["icon"] = "__base__/graphics/icons/coin.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Coin.png";
+doc["order"] = "y";
+doc["subgroup"] = "science-pack";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
+doc["stack_size"] = 50;
+doc["subgroup"] = "energy-pipe-distribution";
+doc["name"] = "pipe";
+doc["icon"] = "__base__/graphics/icons/pipe.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Pipe.png";
+doc["order"] = "a[pipe]-a[pipe]";
+doc["place_result"] = "pipe";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "deconstruction-item";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 selection_color = [];
 selection_color.push(1)
 selection_color.push(0)
 selection_color.push(0)
 doc["selection_color"] = selection_color;
-doc["order"] = "c[automated-construction]-b[deconstruction-planner]";
+doc["alt_selection_cursor_box_type"] = "not-allowed";
+selection_mode = [];
+selection_mode.push("deconstruct")
+doc["selection_mode"] = selection_mode;
+doc["selection_cursor_box_type"] = "not-allowed";
+alt_selection_mode = [];
+alt_selection_mode.push("cancel-deconstruct")
+doc["alt_selection_mode"] = alt_selection_mode;
 alt_selection_color = [];
 alt_selection_color.push(0)
 alt_selection_color.push(0)
 alt_selection_color.push(1)
 doc["alt_selection_color"] = alt_selection_color;
-doc["alt_selection_cursor_box_type"] = "not-allowed";
-doc["subgroup"] = "tool";
-selection_mode = [];
-selection_mode.push("deconstruct")
-doc["selection_mode"] = selection_mode;
-alt_selection_mode = [];
-alt_selection_mode.push("cancel-deconstruct")
-doc["alt_selection_mode"] = alt_selection_mode;
-doc["selection_cursor_box_type"] = "not-allowed";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "deconstruction-item";
-doc["name"] = "deconstruction-planner";
 doc["stack_size"] = 1;
+doc["name"] = "deconstruction-planner";
+doc["icon"] = "__base__/graphics/icons/deconstruction-planner.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Deconstruction-planner.png";
+doc["order"] = "c[automated-construction]-b[deconstruction-planner]";
+doc["subgroup"] = "tool";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/blueprint-book.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Blueprint-book.png";
+doc["type"] = "blueprint-book";
+flags = [];
+flags.push("goes-to-quickbar")
+doc["flags"] = flags;
 doc["inventory_size"] = 30;
 doc["stack_size"] = 1;
-doc["order"] = "c[automated-construction]-c[blueprint-book]";
-flags = [];
-flags.push("goes-to-quickbar")
-doc["flags"] = flags;
-doc["type"] = "blueprint-book";
 doc["name"] = "blueprint-book";
+doc["icon"] = "__base__/graphics/icons/blueprint-book.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Blueprint-book.png";
+doc["order"] = "c[automated-construction]-c[blueprint-book]";
 doc["subgroup"] = "tool";
 db.item.insert(doc);
 
 doc = {};
-doc["icon"] = "__base__/graphics/icons/modular-armor.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Modular-armor.png";
-doc["order"] = "c[modular-armor]";
-doc["subgroup"] = "armor";
-doc["durability"] = 10000;
-doc["inventory_size_bonus"] = 10;
-doc["stack_size"] = 1;
-doc["equipment_grid"] = "small-equipment-grid";
+doc["type"] = "armor";
 flags = [];
 flags.push("goes-to-main-inventory")
 doc["flags"] = flags;
-doc["type"] = "armor";
-doc["name"] = "modular-armor";
 resistances = [];
-resistances.push("table: 0000000000677bd0")
-resistances.push("table: 0000000000677c10")
-resistances.push("table: 0000000000677dd0")
-resistances.push("table: 00000000006786d0")
+resistances.push("table: 000000000067fd30")
+resistances.push("table: 000000000067faf0")
+resistances.push("table: 000000000067fc30")
+resistances.push("table: 0000000000680170")
 doc["resistances"] = resistances;
-db.item.insert(doc);
-
-doc = {};
+doc["durability"] = 1000;
+doc["stack_size"] = 10;
+doc["name"] = "light-armor";
 doc["icon"] = "__base__/graphics/icons/light-armor.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Light-armor.png";
 doc["order"] = "a[light-armor]";
-doc["durability"] = 1000;
-doc["stack_size"] = 10;
 doc["subgroup"] = "armor";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "armor";
-doc["name"] = "light-armor";
-resistances = [];
-resistances.push("table: 0000000000682040")
-resistances.push("table: 0000000000681f40")
-resistances.push("table: 0000000000682140")
-resistances.push("table: 0000000000682240")
-doc["resistances"] = resistances;
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "armor";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["inventory_size_bonus"] = 30;
+doc["equipment_grid"] = "large-equipment-grid";
+resistances = [];
+resistances.push("table: 00000000006311d0")
+resistances.push("table: 0000000000630dd0")
+resistances.push("table: 0000000000630710")
+resistances.push("table: 0000000000630e50")
+doc["resistances"] = resistances;
+doc["durability"] = 20000;
+doc["stack_size"] = 1;
+doc["name"] = "power-armor-mk2";
 doc["icon"] = "__base__/graphics/icons/power-armor-mk2.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Power-armor-mk2.png";
 doc["order"] = "e[power-armor-mk2]";
 doc["subgroup"] = "armor";
-doc["durability"] = 20000;
-doc["inventory_size_bonus"] = 30;
-doc["stack_size"] = 1;
-doc["equipment_grid"] = "large-equipment-grid";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "armor";
-doc["name"] = "power-armor-mk2";
-resistances = [];
-resistances.push("table: 0000000000678450")
-resistances.push("table: 0000000000677f90")
-resistances.push("table: 0000000000677950")
-resistances.push("table: 0000000000678110")
-doc["resistances"] = resistances;
 db.item.insert(doc);
 
 doc = {};
+doc["type"] = "armor";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+resistances = [];
+resistances.push("table: 0000000000675a40")
+resistances.push("table: 0000000000675ac0")
+resistances.push("table: 0000000000675e80")
+resistances.push("table: 0000000000675f00")
+doc["resistances"] = resistances;
+doc["durability"] = 5000;
+doc["stack_size"] = 10;
+doc["name"] = "heavy-armor";
+doc["icon"] = "__base__/graphics/icons/heavy-armor.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Heavy-armor.png";
+doc["order"] = "b[heavy-armor]";
+doc["subgroup"] = "armor";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "armor";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["inventory_size_bonus"] = 10;
+doc["equipment_grid"] = "small-equipment-grid";
+resistances = [];
+resistances.push("table: 0000000000652850")
+resistances.push("table: 00000000006524d0")
+resistances.push("table: 0000000000652510")
+resistances.push("table: 0000000000652750")
+doc["resistances"] = resistances;
+doc["durability"] = 10000;
+doc["stack_size"] = 1;
+doc["name"] = "modular-armor";
+doc["icon"] = "__base__/graphics/icons/modular-armor.png";
+doc["iconurl"] = "https://wiki.factorio.com/images/Modular-armor.png";
+doc["order"] = "c[modular-armor]";
+doc["subgroup"] = "armor";
+db.item.insert(doc);
+
+doc = {};
+doc["type"] = "armor";
+flags = [];
+flags.push("goes-to-main-inventory")
+doc["flags"] = flags;
+doc["inventory_size_bonus"] = 20;
+doc["equipment_grid"] = "medium-equipment-grid";
+resistances = [];
+resistances.push("table: 0000000000647890")
+resistances.push("table: 0000000000646e50")
+resistances.push("table: 0000000000647910")
+resistances.push("table: 0000000000647410")
+doc["resistances"] = resistances;
+doc["durability"] = 15000;
+doc["stack_size"] = 1;
+doc["name"] = "power-armor";
 doc["icon"] = "__base__/graphics/icons/power-armor.png";
 doc["iconurl"] = "https://wiki.factorio.com/images/Power-armor.png";
 doc["order"] = "d[power-armor]";
 doc["subgroup"] = "armor";
-doc["durability"] = 15000;
-doc["inventory_size_bonus"] = 20;
-doc["stack_size"] = 1;
-doc["equipment_grid"] = "medium-equipment-grid";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "armor";
-doc["name"] = "power-armor";
-resistances = [];
-resistances.push("table: 0000000000677e90")
-resistances.push("table: 00000000006785d0")
-resistances.push("table: 0000000000677f50")
-resistances.push("table: 0000000000677810")
-doc["resistances"] = resistances;
-db.item.insert(doc);
-
-doc = {};
-doc["icon"] = "__base__/graphics/icons/heavy-armor.png";
-doc["iconurl"] = "https://wiki.factorio.com/images/Heavy-armor.png";
-doc["order"] = "b[heavy-armor]";
-doc["durability"] = 5000;
-doc["stack_size"] = 10;
-doc["subgroup"] = "armor";
-flags = [];
-flags.push("goes-to-main-inventory")
-doc["flags"] = flags;
-doc["type"] = "armor";
-doc["name"] = "heavy-armor";
-resistances = [];
-resistances.push("table: 0000000000677d50")
-resistances.push("table: 0000000000678190")
-resistances.push("table: 0000000000677d10")
-resistances.push("table: 00000000006780d0")
-doc["resistances"] = resistances;
 db.item.insert(doc);
 
 db.item.update({name:"repair-pack"}, {$set: {eng_name:"Repair pack"}});

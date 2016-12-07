@@ -54,7 +54,11 @@ def ajax_recipetarget(itemname):
         recipe.pop("_id")
         return jsonify(recipe)
     else:
-        return jsonify({"name": itemname, "message": "not found"})
+        return jsonify({
+            "name": itemname, 
+            "message": "not found",
+            "result": itemname
+        })
 
 @_app.route("/")
 @_app.route("/home")

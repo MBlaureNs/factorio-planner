@@ -9,11 +9,15 @@ var rawmats = {};
 var products = {};
 var cooking = false;
 
+var recipecache = {};
+var itemcache = {};
+
 function round(value, decimals) {
   return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
 
 function finalizecookoutput() {
+    var itemimglist = [];
     var newdiv = $(document.createElement("div"));
     newdiv.append($(document.createElement("h1")).html("done cooking"));
     
@@ -23,15 +27,20 @@ function finalizecookoutput() {
     prodtable.addClass("pure-table").addClass("output-table");
     var tr = $(document.createElement("tr")).addClass("output-table-header");
     tr.append($(document.createElement("th"))
-        .html("final product item")
+        .html("final product per minute")
     );
     prodtable.append(tr);
     for (i in Object.keys(products)) {
         var k = Object.keys(products)[i];
         tr = $(document.createElement("tr"));
         tr.append($(document.createElement("td"))
-            .html(k + " x " + products[k])
+            .append($(document.createElement("img"))
+                    .addClass(k+"-img")
+                    .attr("alt",k)
+                    )
+            .append(" x " + products[k])
         );
+        itemimglist.push(k);
         prodtable.append(tr);
     }
     newdiv.append(prodtable);
@@ -44,15 +53,20 @@ function finalizecookoutput() {
     rawtable.addClass("pure-table").addClass("output-table");
     tr = $(document.createElement("tr")).addClass("output-table-header");
     tr.append($(document.createElement("th"))
-        .html("raw material item")
+        .html("raw material per minute")
     );
     rawtable.append(tr);
     for (i in Object.keys(rawmats)) {
         var k = Object.keys(rawmats)[i];
         tr = $(document.createElement("tr"));
         tr.append($(document.createElement("td"))
-            .html(k + " x " + rawmats[k])
+            .append($(document.createElement("img"))
+                    .addClass(k+"-img")
+                    .attr("alt",k)
+                    )
+            .append(" x " + rawmats[k])
         );
+        itemimglist.push(k);
         rawtable.append(tr);
     }
     newdiv.append(rawtable);
@@ -68,9 +82,6 @@ function finalizecookoutput() {
         .html("assemblers")
     );
     tr.append($(document.createElement("th"))
-        .html("assembler type")
-    );
-    tr.append($(document.createElement("th"))
         .html("subproduct")
     );
     tr.append($(document.createElement("th"))
@@ -79,25 +90,45 @@ function finalizecookoutput() {
     asstable.append(tr);
     for (i in Object.keys(assemblers)) {
         var k = Object.keys(assemblers)[i];
+        var recipe = recipecache[k];
         tr = $(document.createElement("tr"));
         tr.append($(document.createElement("td"))
-            .html(round(assemblers[k],4))
+            .append($(document.createElement("img"))
+                    .attr("src","https://wiki.factorio.com/images/Assembling-machine-3.png")
+                    .attr("alt","assembling-machine-3")
+                    )
+            .append(" x " + round(assemblers[k],4))
         );
         tr.append($(document.createElement("td"))
-            .html("assembling-machine-3")
+            .append($(document.createElement("img"))
+                    .addClass(k+"-img")
+                    .attr("alt",k)
+                    )
+            .append(" x " + round(assemblers[k]*60.0/recipe["energy_required"]*recipe["result_count"],4))
         );
-        tr.append($(document.createElement("td"))
-            .html(k + " x " + round(assemblers[k]*60.0,4))
-        );
-        tr.append($(document.createElement("td"))
-            .html("input")
-        );
+        itemimglist.push(k);
+        var mattd = $(document.createElement("td"));
+        for (i in recipe["ingredients"]) {
+            ing = recipe["ingredients"][i];
+            mattd.append($(document.createElement("img"))
+                         .addClass(ing["name"]+"-img")
+                         .attr("alt",ing["name"])
+                         )
+                 .append(" x " + round(ing["amount"] * assemblers[k] * 60.0 / recipe["energy_required"],4));
+            itemimglist.push(ing["name"]);
+        }
+        tr.append(mattd);
         asstable.append(tr);
     }
     newdiv.append(asstable);
     
     outputdiv.empty().append(newdiv);
     cooking = false;
+    
+    for (i in itemimglist) {
+        itemimg = itemimglist[i];
+        ajaxloadimage(itemimg);
+    }
 }
 
 function updatecookoutput() {
@@ -110,41 +141,78 @@ function updatecookoutput() {
     outputdiv.empty().append(newdiv);
 }
 
-function ajaxcook() {
-    if (Object.keys(targets).length > 0) {
-        var target = Object.keys(targets)[0];
+function loadimagecallback(item) {
+    $("."+item["name"]+"-img").each(function (index) {
+        $(this).attr("src",item["iconurl"]);
+    });
+}
+
+function ajaxloadimage(k) {
+    if (k in itemcache) {
+        loadimagecallback(itemcache[k]);
+    } else {
         $.ajax({
             type: "GET",
             contentType: "application/json",
-            url: "/ajax/recipe/target/"+target,
-            success: function(r) {
-                if ("message" in r) {
-                    if (target in rawmats) {
-                        rawmats[target] += targets[target];
-                    } else {
-                        rawmats[target] = targets[target];
-                    }
-                } else {
-                    var equivassembcount = targets[target] * r["energy_required"] / 60.0;
-                    if (target in assemblers) {
-                        assemblers[target] += equivassembcount;
-                    } else {
-                        assemblers[target] = equivassembcount;
-                    }
-                    for (i in r["ingredients"]) {
-                        entry = r["ingredients"][i];
-                        if (entry.name in targets) {
-                            targets[entry.name] += entry.amount;
-                        } else {
-                            targets[entry.name] = entry.amount;
-                        }
-                    }
+            url: "/ajax/item/"+k,
+            success: function(r) {                    
+                if (!(r["name"] in itemcache)) {
+                    itemcache[r["name"]] = r;
                 }
-                delete targets[target];
-                updatecookoutput();
-                ajaxcook();
+                loadimagecallback(r);
             }
         });
+    }
+}
+
+function cookcallback(r) {
+    target = r["result"];
+    if ("message" in r) {
+        if (target in rawmats) {
+            rawmats[target] += targets[target];
+        } else {
+            rawmats[target] = targets[target];
+        }
+    } else {
+        var equivassembcount = targets[target] * r["energy_required"] / r["result_count"] / 60.0;
+        if (target in assemblers) {
+            assemblers[target] += equivassembcount;
+        } else {
+            assemblers[target] = equivassembcount;
+        }
+        for (i in r["ingredients"]) {
+            entry = r["ingredients"][i];
+            if (entry.name in targets) {
+                targets[entry.name] += entry.amount * targets[target] / r["result_count"];
+            } else {
+                targets[entry.name] = entry.amount * targets[target] / r["result_count"];
+            }
+        }
+    }
+    delete targets[target];
+    updatecookoutput();
+    ajaxcook();
+}
+
+function ajaxcook() {
+    if (Object.keys(targets).length > 0) {
+        var target = Object.keys(targets)[0];
+        if (target in recipecache) {
+            var r = recipecache[target];
+            cookcallback(r);
+        } else {
+            $.ajax({
+                type: "GET",
+                contentType: "application/json",
+                url: "/ajax/recipe/target/"+target,
+                success: function(r) {                    
+                    if (!(r["result"] in recipecache)) {
+                        recipecache[r["result"]] = r;
+                    }
+                    cookcallback(r);
+                }
+            });
+        }
     } else {
         finalizecookoutput();
     }
