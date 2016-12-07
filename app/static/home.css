@@ -1,0 +1,74 @@
+body {
+    background-color: #DDAA88;
+    font-size: 16px;
+}
+
+.title-span {
+    font-size: 40px;
+}
+
+.smol-span {
+    font-size: 8px;
+}
+
+.main-div {
+    height: 700px;
+}
+
+.pure-control-group {
+}
+
+.target-form {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.target-category {
+    font-size: 24px;
+}
+
+.target-label {
+}
+
+.target-input {
+    vertical-align: middle;
+    font-size: 16px;
+}
+.target-label-img {
+    vertical-align: middle;
+}
+
+.header-panel {
+    background-color: #DDAA88;
+    height: 50px;
+}
+
+.left-panel-upper {
+    height: 600px;
+    overflow-y: scroll;
+    background-color: #BBCCEE;
+}
+
+.left-panel-lower {
+    background-color: #EEEECC;
+    height: 100px;
+}
+
+.left-panel {
+    background-color: #AA0000;
+    height: 100%;
+}
+
+.right-panel {
+    background-color: #AAEE99;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.output-table {
+    background-color: #DDEEEE;
+}
+
+.output-table-header {
+    background-color: #CCDDDD;
+}

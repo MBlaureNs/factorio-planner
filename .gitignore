@@ -1,0 +1,10 @@
+#factorio base mod
+/base/campaigns
+/base/graphics
+/base/locale
+/base/migrations
+/base/prototypes
+/base/scenarios
+/base/sound
+/base/data.lua
+/base/info.json
