@@ -26,6 +26,8 @@ Copy contents of Factorio base mod into /base directory.
 
 Base mod is found in /data/base in the Factorio install directory.
 
+Modify `locale/item-name.cfg` manually to load english item names. (to do: write a script to do this)
+
 To generate mongo inserts file:
 
 `$ lua base/mongo.lua`
