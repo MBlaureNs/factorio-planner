@@ -37,6 +37,7 @@ _ITEM_BLACKLIST.append("crude-oil-barrel")
 _ITEM_BLACKLIST.append("raw-wood")
 _ITEM_BLACKLIST.append("sulfur")
 _ITEM_BLACKLIST.append("plastic-bar")
+_ITEM_BLACKLIST.append("solid-fuel")
     
 @_app.route("/ajax/item/<itemname>")
 def ajax_item(itemname):
