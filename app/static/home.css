@@ -69,6 +69,14 @@ body {
     background-color: #DDEEEE;
 }
 
+.result-row-0 {
+    background-color: #DDDDEE;
+}
+
+.result-row-1 {
+    background-color: #DDEEDD;
+}
+
 .output-table-header {
-    background-color: #CCDDDD;
+    background-color: #BBCCCC;
 }

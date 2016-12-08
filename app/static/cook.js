@@ -1,7 +1,8 @@
 var cookbutton = $("#cook-button");
 var outputdiv = $("#cook-output-panel");
 
-var assembly_speed = 1.25;
+var assembly_speed = 0.75; //machine 2
+var smelt_speed = 1; //stone furnace
 
 var assemblers = {};
 var targets = {};
@@ -33,6 +34,7 @@ function finalizecookoutput() {
     for (i in Object.keys(products)) {
         var k = Object.keys(products)[i];
         tr = $(document.createElement("tr"));
+        tr.addClass("result-row-" + (i%2) );
         tr.append($(document.createElement("td"))
             .append($(document.createElement("img"))
                     .addClass(k+"-img")
@@ -59,6 +61,7 @@ function finalizecookoutput() {
     for (i in Object.keys(rawmats)) {
         var k = Object.keys(rawmats)[i];
         tr = $(document.createElement("tr"));
+        tr.addClass("result-row-" + (i%2) );
         tr.append($(document.createElement("td"))
             .append($(document.createElement("img"))
                     .addClass(k+"-img")
@@ -91,14 +94,27 @@ function finalizecookoutput() {
     for (i in Object.keys(assemblers)) {
         var k = Object.keys(assemblers)[i];
         var recipe = recipecache[k];
+        var smelting = "category" in recipe && recipe["category"] == "smelting";
+        
         tr = $(document.createElement("tr"));
-        tr.append($(document.createElement("td"))
-            .append($(document.createElement("img"))
-                    .attr("src","https://wiki.factorio.com/images/Assembling-machine-3.png")
-                    .attr("alt","assembling-machine-3")
-                    )
-            .append(" x " + round(assemblers[k],4))
-        );
+        tr.addClass("result-row-" + (i%2) );
+        if (smelting) {
+            tr.append($(document.createElement("td"))
+                .append($(document.createElement("img"))
+                        .attr("src","https://wiki.factorio.com/images/Stone-furnace.png")
+                        .attr("alt","stone-furnace")
+                        )
+                .append(" x " + round(assemblers[k] / smelt_speed,4))
+            );
+        } else {
+            tr.append($(document.createElement("td"))
+                .append($(document.createElement("img"))
+                        .attr("src","https://wiki.factorio.com/images/Assembling-machine-2.png")
+                        .attr("alt","assembling-machine-2")
+                        )
+                .append(" x " + round(assemblers[k] / assembly_speed,4))
+            );
+        }
         tr.append($(document.createElement("td"))
             .append($(document.createElement("img"))
                     .addClass(k+"-img")
@@ -114,7 +130,7 @@ function finalizecookoutput() {
                          .addClass(ing["name"]+"-img")
                          .attr("alt",ing["name"])
                          )
-                 .append(" x " + round(ing["amount"] * assemblers[k] * 60.0 / recipe["energy_required"],4));
+                 .append(" x " + round(ing["amount"] * assemblers[k] * 60.0 / recipe["energy_required"],4) + "   ");
             itemimglist.push(ing["name"]);
         }
         tr.append(mattd);
