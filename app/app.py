@@ -95,4 +95,4 @@ def todo_html():
 
 if __name__ == "__main__":
     _app.debug = True
-    _app.run()
+    _app.run("0.0.0.0")
